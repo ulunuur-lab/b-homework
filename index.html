@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B1 Past & Future Tenses Mastery Lab | TeacherOS</title>
+  <title>B1 Reported Speech (O'zlashtirma Gap) Mastery Lab | Ulunur's English</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,6 +116,15 @@
       background: rgba(99, 102, 241, 0.1); border-left: 3px solid var(--accent);
       padding: 10px 14px; border-radius: 6px; font-size: 0.84rem; color: #c7d2fe; margin-bottom: 18px;
     }
+    .backshift-table {
+      width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.82rem;
+      border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    }
+    .backshift-table th, .backshift-table td {
+      padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border);
+    }
+    .backshift-table th { background: rgba(139, 92, 246, 0.15); color: #c4b5fd; font-weight: 800; }
+    .backshift-table td code { font-family: 'JetBrains Mono', monospace; color: #6ee7b7; font-weight: 700; }
 
     /* VOCABULARY GRID */
     .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
@@ -166,7 +175,7 @@
     .input-wrap { display: flex; gap: 8px; margin-top: 8px; }
     .check-btn {
       background: var(--primary); color: #fff; border: none; padding: 8px 16px; border-radius: 8px;
-      font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
+      font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;
     }
     .check-btn:hover { background: var(--primary-hover); }
 
@@ -204,11 +213,11 @@
   <header>
     <div class="badge-row">
       <span class="badge badge-topic">B1 Grammar Masterclass</span>
-      <span class="badge badge-mastery">Past & Future Tenses Lab</span>
+      <span class="badge badge-mastery">Reported Speech Lab</span>
       <span class="badge badge-interactive">58 Interactive Items</span>
     </div>
-    <h1>Past & Future Tenses Mastery Laboratory</h1>
-    <p class="subtitle">O'tmish zamonlari (Past Simple, Past Continuous, Past Perfect, Past Perfect Continuous), kelajak shakllari (will, be going to, Future Continuous, Future Perfect) hamda Future in the Past (<i>was/were going to</i>, <i>would</i>) bo'yicha maxsus sinov laboratoriyasi.</p>
+    <h1>Reported Speech (Direct to Indirect) Mastery Lab</h1>
+    <p class="subtitle">Direct Speech (ko'chirma gap)ni Indirect Speech (o'zlashtirma gap)ga aylantirish: Zamonlar orqaga surilishi (Backshift), olmoshlar moslashuvi, payt/o'rin ravishlari, Say vs Tell va maxsus reporting verbs (admit, deny, promise, refuse, remind) bo'yicha maxsus sinov laboratoriyasi.</p>
   </header>
 
   <!-- STUDENT INFO -->
@@ -216,7 +225,7 @@
     <div class="student-inputs">
       <div class="input-group">
         <label>Ism va Familiya</label>
-        <input type="text" id="studentName" placeholder="Masalan: Malika Karimova" oninput="saveDraft()">
+        <input type="text" id="studentName" placeholder="Masalan: Azizbek Karimov" oninput="saveDraft()">
       </div>
       <div class="input-group">
         <label>Telegram Username</label>
@@ -244,51 +253,68 @@
   <!-- SECTION 1: VOCABULARY & AUDIO -->
   <div class="section-box">
     <div class="sec-title">
-      <span>🔊 1-Qism: Past & Future Vaqt Ko'rsatkichlari (12 ta Kalit So'z)</span>
+      <span>🔊 1-Qism: Reporting Verbs & Vaqt/O'rin O'zgarishlari (12 ta Kalit So'z)</span>
     </div>
-    <div class="sec-desc">Tugmachani bosib so'zlarning to'g'ri talaffuzini eshiting va ularning o'tmish hamda kelajak zamonlardagi ma'nosiga e'tibor bering.</div>
+    <div class="sec-desc">Tugmachani bosib so'zlarning to'g'ri talaffuzini eshiting va ularning o'zlashtirma gapdagi qoidasiga e'tibor bering.</div>
     <div class="vocab-grid" id="vocabGrid"></div>
   </div>
 
-  <!-- SECTION 2: WAS/WERE GOING TO vs WOULD -->
+  <!-- SECTION 2: SAY vs TELL & REPORTING VERBS DECISION LAB -->
   <div class="section-box">
     <div class="sec-title">
-      <span>⚡ 2-Qism: Future in the Past Decision Lab (15 ta Savol)</span>
+      <span>⚡ 2-Qism: Say vs Tell & Reporting Verbs Decision Lab (15 ta Savol)</span>
     </div>
-    <div class="sec-desc"><b>Qoida:</b> <code>was/were going to</code> = o'tmishda qilinmoqchi bo'lgan, lekin ko'pincha amalga oshmagan niyat/reja. <code>would</code> = o'tmishda turib kelajak haqida berilgan va'da yoki bashorat (will ning o'tgan zamoni).</div>
+    <div class="sec-desc"><b>Asosiy qoida:</b> <code>say (that)</code> = kimgaligi aytilmaydi (<i>He said that...</i>). <code>tell + someone (that)</code> = kimgaligi shart (<i>He told me that...</i>). Maxsus fe'llar: <code>remind s.o to V1</code>, <code>refuse to V1</code>, <code>promise to V1 / that</code>, <code>admit/deny + V-ing</code>.</div>
     
     <div class="rule-banner">
-      💡 <b>Asosiy farq:</b> "I was going to call you, but my phone battery died." (Niyat bor edi, uzilib qoldi). "He told me that he would love me forever." (O'tmishdagi va'da/kelajak).
+      💡 <b>O'zbekcha qopqon:</b> O'zbek tilida "U aytdi" deb kimgaligini aytmasak ham bo'ladi, lekin ingliz tilida "He told that..." ❌ bo'lmaydi! Har doim "He told ME that..." yoki "He said that..." ✅ bo'lishi shart!
     </div>
 
-    <div id="fitpContainer"></div>
+    <div id="sayTellContainer"></div>
   </div>
 
   <!-- SECTION 3: REPORTED SPEECH TRANSFORMATIONS -->
   <div class="section-box">
     <div class="sec-title">
-      <span>🔄 3-Qism: O'tmish va Kelajak Zamonlar Transformatsiyasi (15 ta Savol)</span>
+      <span>🔄 3-Qism: Direct Speech dan Reported Speech ga O'girish (15 ta Savol)</span>
     </div>
-    <div class="sec-desc">Berilgan gaplarni o'tmish nutqiga (Reported Speech) o'giring. Zamonlar orqaga surilishi (Backshift: Present -> Past, Past -> Past Perfect, will -> would, is going to -> was going to) qoidalariga qat'iy e'tibor bering.</div>
+    <div class="sec-desc">Ko'chirma gaplarni o'zlashtirma gapga aylantiring. Zamonlar orqaga surilishi (Backshift), olmoshlar va vaqt so'zlari o'zgarishiga qat'iy rioya qiling.</div>
+
+    <table class="backshift-table">
+      <thead>
+        <tr>
+          <th>Direct Speech (Ko'chirma gap)</th>
+          <th>Reported Speech (Orqaga surilish)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Present Simple (<code>work</code>)</td><td>Past Simple (<code>worked</code>)</td></tr>
+        <tr><td>Present Continuous (<code>am/is/are working</code>)</td><td>Past Continuous (<code>was/were working</code>)</td></tr>
+        <tr><td>Past Simple / Present Perfect (<code>worked / have worked</code>)</td><td>Past Perfect (<code>had worked</code>)</td></tr>
+        <tr><td>will / can / must</td><td>would / could / had to</td></tr>
+        <tr><td>yesterday / tomorrow / today</td><td>the day before / the following day / that day</td></tr>
+      </tbody>
+    </table>
+
     <div id="transformContainer"></div>
   </div>
 
   <!-- SECTION 4: ERROR DETECTION -->
   <div class="section-box">
     <div class="sec-title">
-      <span>🔍 4-Qism: O'tmish va Kelajak Zamon Xatolarini Tuzatish (10 ta Qopqon)</span>
+      <span>🔍 4-Qism: O'zlashtirma Gap Qopqonlarini Tuzatish (10 ta Xato Hunt)</span>
     </div>
-    <div class="sec-desc">O'tmish va kelajak zamonlar qoidalariga zid noto'g'ri jumlalar. Gapni to'liq to'g'rilab yozing.</div>
+    <div class="sec-desc">Ushbu gaplarda B1 darajadagi o'quvchilar ko'p yo'l qo'yadigan jiddiy grammatik xatolar mavjud (inversiya, say/tell, vaqt so'zi yoki backshift xatosi). Gapni to'liq to'g'rilab yozing.</div>
     <div id="errorHuntContainer"></div>
   </div>
 
-  <!-- SECTION 5: PAST VS FUTURE TENSES MASTERY -->
+  <!-- SECTION 5: REPORTED SPEECH MCQ MASTERY -->
   <div class="section-box">
     <div class="sec-title">
-      <span>🎯 5-Qism: Past vs Future Zamonlar Integratsiyasi (10 ta Test)</span>
+      <span>🎯 5-Qism: Reported Speech Integratsiyalashgan Test (10 ta Test)</span>
     </div>
-    <div class="sec-desc">Past Simple, Past Continuous, Past Perfect, Future Continuous, Future Perfect va vaqt ergash gaplari bo'yicha to'g'ri variantni tanlang.</div>
-    <div id="pastFutureMcqContainer"></div>
+    <div class="sec-desc">Savol gaplar (if/whether, wh-), buyruq/iltimoslar (told me to, asked me not to) va reporting verbs qoidalarini mustahkamlovchi 4-variantli test.</div>
+    <div id="mcqContainer"></div>
   </div>
 
   <!-- SECTION 6: CONTEXTUAL TRANSLATION -->
@@ -296,28 +322,27 @@
     <div class="sec-title">
       <span>✍️ 6-Qism: Kontekstual Tarjima (8 ta Gap)</span>
     </div>
-    <div class="sec-desc">O'zbek tilidagi gaplarni o'tmish va kelajak zamon qoidalariga rioya qilgan holda inglizchaga tarjima qiling.</div>
+    <div class="sec-desc">O'zbek tilidagi fikrlarni ingliz tilidagi o'zlashtirma gap qoidalari asosida professional tarjima qiling.</div>
     <div id="transContainer"></div>
   </div>
 
-  <!-- SECTION 7: NARRATIVE STORY WRITING -->
+  <!-- SECTION 7: NARRATIVE ESSAY -->
   <div class="section-box">
     <div class="sec-title">
-      <span>📝 7-Qism: Hikoya Yozish Labi: "The Day When Nothing Went According to Plan"</span>
+      <span>📝 7-Qism: Suhbatni Hikoya Qilib Yozish (Mini-Insho)</span>
     </div>
-    <div class="sec-desc">Boshlangan rejalaringiz buzilib ketgan yoki kutilmagan o'zgarishlar yuz bergan kun haqida hikoya yozing. Matnda kamida <b>3 ta 'was/were going to'</b>, <b>2 ta 'would'</b> va <b>3 ta o'tmish zamoni (Past Continuous / Past Perfect)</b> qatnashishi shart!</div>
-    
     <div class="essay-prompt">
-      <h4>Mavzu: The Day When Nothing Went According to Plan (Rejalar o'zgargan kun)</h4>
-      <p>Masalan: "I was going to catch the 8 AM train, but my alarm didn't ring. When I reached the station, the train had already left..."</p>
-      <textarea id="essayNarrative" rows="8" placeholder="Write your narrative story here (minimum 100-140 words)..." oninput="saveDraft()"></textarea>
+      <h4>Topshiriq: Kechagi suhbatni qayta hikoya qilib bering (8-10 gap)</h4>
+      <p>Yaqinda do'stingiz, shifokor yoki ustozingiz bilan bo'lib o'tgan qiziqarli suhbatni eslang. Ushbu suhbatni to'liq Reported Speech orqali hikoya qiling.</p>
+      <p style="color:#c4b5fd; font-weight:700;">Talablar: Kamida 4 xil reporting verbs (<i>said that, told me that, asked if/whether, promised to/that, explained that, refused to</i>) va vaqt ko'rsatkichlari (<i>the previous day, the next day, that day</i>) ishlatilsin.</p>
     </div>
+    <textarea id="essayNarrative" rows="7" placeholder="Yesterday, I met my friend Jasur. He told me that he had just returned from Samarkand. I asked him whether he had enjoyed the trip. He explained that..." oninput="saveDraft()"></textarea>
   </div>
 
-  <!-- SUBMISSION -->
+  <!-- SUBMIT CARD -->
   <div class="submit-card">
-    <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:10px;">Vazifani Ustozga Yuborish</h3>
-    <p style="color:#cbd5e1; font-size:0.92rem; margin-bottom:20px; max-width:600px; margin-left:auto; margin-right:auto;">Barcha javoblaringiz, 15 ta transformatsiyangiz, tanlovlaringiz va hikoyangiz to'g'ridan-to'g'ri ustozingizning Telegram botiga yuboriladi.</p>
+    <h3 style="font-size:1.4rem; font-weight:900; margin-bottom:8px; color:#fff;">Laboratoriya Hisobotini Ustozga Jo'natish</h3>
+    <p style="color:#cbd5e1; font-size:0.92rem; margin-bottom:20px; max-width:600px; margin-left:auto; margin-right:auto;">Barcha javoblaringiz, 15 ta transformatsiyangiz, xato tuzatishlaringiz va hikoyangiz to'g'ridan-to'g'ri ustozingizning Telegram botiga to'liq tahlil bilan yuboriladi.</p>
     <button class="submit-btn" id="submitBtn" onclick="submitToTelegram()">🚀 Vazifani Topshirish</button>
     <div class="status-msg" id="statusMsg"></div>
   </div>
@@ -328,453 +353,464 @@
   // TELEGRAM CONFIGURATION
   const BOT_TOKEN = '8787909516:AAFpho1G-GYg1UW87lTIEjR1Ir0z6QjmN78';
   const TEACHER_IDS = ['6315515792', '7957347033'];
-  const STORAGE_KEY = 'teacheros_hw_past_future_mastery';
+  const STORAGE_KEY = 'teacheros_hw_b1_reported_speech_lab';
 
-  // 12 AUDIO VOCABULARY ITEMS (PURE PAST & FUTURE)
+  // 12 VOCABULARY & REPORTING VERBS (WITH AUDIO)
   const VOCAB_DATA = [
-    { word: "was going to", uz: "qilmoqchi edi (lekin qilinmadi)", ex: "I was going to buy the ticket, but I had no cash." },
-    { word: "were going to", uz: "qilmoqchi edilar (ko'plikda reja)", ex: "They were going to visit us last night." },
-    { word: "would", uz: "qilishini aytdi / qilardi", ex: "He said he would help me tomorrow." },
-    { word: "would be doing", uz: "o'sha vaqtda qilayotgan bo'lardi", ex: "She said she would be waiting at the airport." },
-    { word: "by the time", uz: "...vaqtga qadar (Past/Future Perfect)", ex: "By the time we arrived, the train had left." },
+    { word: "say (that)", uz: "demoq (tinglovchisiz: He said that...)", ex: "He said that he was ready." },
+    { word: "tell someone (that)", uz: "kimgadir aytmoq (tinglovchi bilan: He told me that...)", ex: "She told me that she loved reading." },
+    { word: "admit (that / V-ing)", uz: "tan olmoq", ex: "He admitted making a serious mistake." },
+    { word: "deny (V-ing)", uz: "inkor etmoq, rad qilmoq", ex: "The suspect denied stealing the money." },
+    { word: "promise (to do / that)", uz: "va'da bermoq", ex: "She promised to return the car tomorrow." },
+    { word: "refuse (to do)", uz: "rad qilmoq (taklif/buyruqni)", ex: "He refused to answer personal questions." },
+    { word: "remind someone (to do)", uz: "eslatmoq", ex: "My mother reminded me to lock the door." },
     { word: "the previous day", uz: "o'tgan kuni (yesterday o'rniga)", ex: "He said he had arrived the previous day." },
-    { word: "the following day", uz: "ertasi kuni (tomorrow o'rniga)", ex: "She promised to return the following day." },
-    { word: "two days earlier", uz: "ikki kun oldin (two days ago o'rniga)", ex: "He had bought the car two days earlier." },
-    { word: "had already done", uz: "allaqachon qilib bo'lgan edi", ex: "The film had already started when we arrived." },
-    { word: "had been doing", uz: "qilib kelayotgan edi (jarayon)", ex: "He was tired because he had been working all day." },
-    { word: "will have done", uz: "qilib bo'lgan bo'ladi (Future Perfect)", ex: "By 2030, scientists will have found a cure." },
-    { word: "as soon as", uz: "...bo'lishi bilanoq (vaqt bog'lovchisi)", ex: "I will call you as soon as the plane lands." }
+    { word: "the following day", uz: "ertasi kuni (tomorrow o'rniga)", ex: "She promised to call the following day." },
+    { word: "that day", uz: "o'sha kuni (today o'rniga)", ex: "He explained that he was busy that day." },
+    { word: "then / at that time", uz: "o'sha paytda (now o'rniga)", ex: "She said she was working then." },
+    { word: "there", uz: "u yerda (here o'rniga)", ex: "He said he had lived there for ten years." }
   ];
 
-  // 15 WAS/WERE GOING TO vs WOULD ITEMS
-  const FITP_ITEMS = [
+  // 15 SAY VS TELL & REPORTING VERBS ITEMS
+  const SAY_TELL_ITEMS = [
     {
       id: 1,
-      prompt: "I ______ call you last night, but my phone battery completely died.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Amalga oshmagan shaxsiy niyat / reja = 'was going to'."
+      prompt: "He ______ that he was too exhausted to drive home.",
+      opts: ["said", "told"],
+      ans: "said",
+      expl: "Tinglovchi (me/us/him) yo'q. 'said that' to'g'ri shakl."
     },
     {
       id: 2,
-      prompt: "She assured me that she ______ always stand by my side.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishda berilgan va'da/ishonch (will ning o'tgan zamoni) = 'would'."
+      prompt: "She ______ me that she had already booked the flight tickets.",
+      opts: ["told", "said"],
+      ans: "told",
+      expl: "Tinglovchi 'me' mavjud: 'told me that' to'g'ri."
     },
     {
       id: 3,
-      prompt: "We ______ fly to Madrid, but the pilots went on strike.",
-      opts: ["were going to", "would"],
-      ans: "were going to",
-      expl: "Rejalashtirilgan, lekin tashqi sabab bilan to'xtatilgan reja = 'were going to'."
+      prompt: "My boss ______ to give our team a bonus if we hit the deadline.",
+      opts: ["promised", "told"],
+      ans: "promised",
+      expl: "Kelajakdagi narsani bajarishga va'da berish: 'promised to give'."
     },
     {
       id: 4,
-      prompt: "Little did he know that he ______ become the president twenty years later.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "Kelajak taqdiri haqidagi hikoya uslubi (o'tmishdagi kelajak) = 'would'."
+      prompt: "The cashier ______ stealing any money from the register.",
+      opts: ["denied", "refused"],
+      ans: "denied",
+      expl: "Qilingan ishni inkor qilish: 'denied + V-ing' (denied stealing)."
     },
     {
       id: 5,
-      prompt: "He ______ buy that sports car, but he realized the insurance was too expensive.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Qaror o'zgargani sababli bekor qilingan niyat = 'was going to'."
+      prompt: "Sarah ______ me to take an umbrella because it was pouring outside.",
+      opts: ["reminded", "said"],
+      ans: "reminded",
+      expl: "Kimgadir biror ishni eslatish: 'reminded me to take'."
     },
     {
       id: 6,
-      prompt: "I knew the exam ______ be difficult, but I didn't expect it to be this tough.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishdagi shaxsiy bashorat / kutilma = 'would'."
+      prompt: "The professor ______ that the exam date had been changed.",
+      opts: ["explained", "told"],
+      ans: "explained",
+      expl: "Sabab/holatni tushuntirishda tinglovchisiz 'explained that' ishlatiladi."
     },
     {
       id: 7,
-      prompt: "They ______ paint the house green, but their neighbors complained.",
-      opts: ["were going to", "would"],
-      ans: "were going to",
-      expl: "Boshlangan yoki rejalashtirilgan ish to'xtab qoldi = 'were going to'."
+      prompt: "The driver ______ to sign the traffic violation paper.",
+      opts: ["refused", "denied"],
+      ans: "refused",
+      expl: "Biror narsani qilishdan bosh tortish: 'refused to sign'."
     },
     {
       id: 8,
-      prompt: "The weather forecast said it ______ rain all weekend.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishdagi rasmiy ob-havo bashorati = 'would'."
+      prompt: "Ali ______ breaking his sister's smartphone by accident.",
+      opts: ["admitted", "promised"],
+      ans: "admitted",
+      expl: "Xatoni yoki aybni tan olish: 'admitted + V-ing' (admitted breaking)."
     },
     {
       id: 9,
-      prompt: "I ______ tell you the secret, but you promised not to laugh!",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Aytmoqchi bo'lib turgan holat = 'was going to'."
+      prompt: "She ______ whether I had ever visited London before.",
+      opts: ["asked", "said"],
+      ans: "asked",
+      expl: "So'roq gaplarda 'if/whether' bilan 'asked' keladi."
     },
     {
       id: 10,
-      prompt: "He promised that he ______ return the borrowed money on Friday.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishdagi va'da = 'would'."
+      prompt: "The tourist ______ us where the nearest metro station was.",
+      opts: ["asked", "said"],
+      ans: "asked",
+      expl: "Ma'lumot so'rash: 'asked us where...'."
     },
     {
       id: 11,
-      prompt: "The train ______ depart at 6:00, but a signal failure delayed it.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Jadval bo'yicha rejalashtirilgan, lekin kechikkan = 'was going to'."
+      prompt: "Please don't ______ me what I should or shouldn't do!",
+      opts: ["tell", "say"],
+      ans: "tell",
+      expl: "Tinglovchi 'me' bor: 'tell me'."
     },
     {
       id: 12,
-      prompt: "She swore that she ______ never speak to him again.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "Qasam ichish / va'da berish = 'would'."
+      prompt: "She ______ goodbye and walked out into the rain.",
+      opts: ["said", "told"],
+      ans: "said",
+      expl: "Xayrlashish/salomlashish iboralarida 'say goodbye', 'say hello' ishlatiladi."
     },
     {
       id: 13,
-      prompt: "We ______ go hiking, but the storm forced us to stay inside.",
-      opts: ["were going to", "would"],
-      ans: "were going to",
-      expl: "Amalga oshmay qolgan reja = 'were going to'."
+      prompt: "The librarian ______ us not to speak loudly in the study room.",
+      opts: ["told", "said"],
+      ans: "told",
+      expl: "Buyruq/taqiq: 'told us not to speak'."
     },
     {
       id: 14,
-      prompt: "He told the team that hard work ______ pay off eventually.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "Kutilma va umumiy ishonch = 'would'."
+      prompt: "He ______ sorry for arriving 20 minutes late to the meeting.",
+      opts: ["said", "told"],
+      ans: "said",
+      expl: "'say sorry' — kechirim so'rash iborasi."
     },
     {
       id: 15,
-      prompt: "I ______ order seafood, but the waiter recommended the steak.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Oxirgi daqiqada o'zgargan niyat = 'was going to'."
+      prompt: "My grandfather ______ me a fascinating story about his youth.",
+      opts: ["told", "said"],
+      ans: "told",
+      expl: "Hikoya yoki ertak aytib berish: 'tell someone a story'."
     }
   ];
 
-  // 15 PURE PAST & FUTURE TRANSFORMATIONS
+  // 15 DIRECT TO REPORTED TRANSFORMATIONS
   const TRANSFORM_ITEMS = [
     {
       id: 1,
-      direct: "Mary: 'I am moving to London tomorrow.'",
-      lead: "Mary said that...",
-      hint: "am moving -> was moving, tomorrow -> the next day / the following day",
+      direct: "John: 'I work for an international IT company.'",
+      lead: "John said that...",
+      hint: "work -> worked (Present Simple -> Past Simple)",
       accepted: [
-        "she was moving to london the next day",
-        "she was moving to london the following day"
+        "he worked for an international it company"
       ]
     },
     {
       id: 2,
-      direct: "Doctor: 'I will check your test results tomorrow morning.'",
-      lead: "The doctor said that...",
-      hint: "will check -> would check, tomorrow morning -> the following morning",
+      direct: "Mary: 'I am preparing dinner right now.'",
+      lead: "Mary said that...",
+      hint: "am preparing -> was preparing, right now -> right then / then",
       accepted: [
-        "he would check my test results the following morning",
-        "she would check my test results the following morning",
-        "he would check my test results the next morning",
-        "she would check my test results the next morning"
+        "she was preparing dinner right then",
+        "she was preparing dinner then",
+        "she was preparing dinner at that time"
       ]
     },
     {
       id: 3,
-      direct: "Doctor: 'Have you taken your medicine today?'",
-      lead: "The doctor asked me...",
-      hint: "Yes/No savoli: if / whether + to'g'ri so'z tartibi (I had taken... that day)",
+      direct: "David: 'I bought a new laptop yesterday.'",
+      lead: "David told me that...",
+      hint: "bought -> had bought, yesterday -> the previous day / the day before",
       accepted: [
-        "if i had taken my medicine that day",
-        "whether i had taken my medicine that day"
+        "he had bought a new laptop the day before",
+        "he had bought a new laptop the previous day"
       ]
     },
     {
       id: 4,
-      direct: "Tom: 'Where did you buy this leather jacket?'",
-      lead: "Tom asked me...",
-      hint: "Wh-savol: where + I had bought + that leather jacket (no inversion!)",
+      direct: "Emma: 'I have already finished my bachelor thesis.'",
+      lead: "Emma said that...",
+      hint: "have finished -> had finished (Present Perfect -> Past Perfect)",
       accepted: [
-        "where i had bought that leather jacket",
-        "where i bought that leather jacket"
+        "she had already finished her bachelor thesis"
       ]
     },
     {
       id: 5,
-      direct: "Sarah: 'I was watching a movie when you phoned me.'",
-      lead: "Sarah explained that...",
-      hint: "was watching -> had been watching, phoned -> had phoned / phoned",
+      direct: "Alex: 'I will call you tomorrow evening.'",
+      lead: "Alex promised that...",
+      hint: "will call -> would call, you -> me, tomorrow evening -> the following evening / the next evening",
       accepted: [
-        "she had been watching a movie when i phoned her",
-        "she had been watching a movie when i had phoned her"
+        "he would call me the following evening",
+        "he would call me the next evening"
       ]
     },
     {
       id: 6,
-      direct: "Teacher: 'We will have completed the whole book by next month.'",
-      lead: "The teacher explained that...",
-      hint: "will have completed -> would have completed, next month -> the following month",
+      direct: "Sarah: 'I can speak three foreign languages fluently.'",
+      lead: "Sarah said that...",
+      hint: "can speak -> could speak",
       accepted: [
-        "they would have completed the whole book by the following month",
-        "they would have completed the whole book by the next month"
+        "she could speak three foreign languages fluently"
       ]
     },
     {
       id: 7,
-      direct: "David: 'I will be preparing for the exam all evening.'",
-      lead: "David told me that...",
-      hint: "will be preparing -> would be preparing, that evening",
+      direct: "Doctor: 'You must take this antibiotic twice a day.'",
+      lead: "The doctor told me that...",
+      hint: "must -> had to, this -> that",
       accepted: [
-        "he would be preparing for the exam all evening",
-        "he would be preparing for the exam that evening"
+        "i had to take that antibiotic twice a day"
       ]
     },
     {
       id: 8,
-      direct: "Emma: 'I have never visited Italy, but I am going to fly to Rome.'",
-      lead: "Emma said that...",
-      hint: "have never visited -> had never visited, am going to fly -> was going to fly",
+      direct: "Policeman: 'Where are you going at this late hour?'",
+      lead: "The policeman asked me...",
+      hint: "Wh-savolda inversiya yo'qoladi: where I was going at that late hour",
       accepted: [
-        "she had never visited italy but she was going to fly to rome",
-        "she had never visited italy, but she was going to fly to rome"
+        "where i was going at that late hour"
       ]
     },
     {
       id: 9,
-      direct: "Boss: 'Why didn't you finish the financial report yesterday?'",
-      lead: "The boss asked me...",
-      hint: "why I had not finished... the day before / the previous day",
+      direct: "Teacher: 'Do you understand the formula?'",
+      lead: "The teacher asked us...",
+      hint: "Yes/No savol: if / whether + we understood the formula",
       accepted: [
-        "why i had not finished the financial report the previous day",
-        "why i hadnt finished the financial report the previous day",
-        "why i had not finished the financial report the day before",
-        "why i hadnt finished the financial report the day before"
+        "if we understood the formula",
+        "whether we understood the formula"
       ]
     },
     {
       id: 10,
-      direct: "Alex: 'I bought my car two years ago.'",
-      lead: "Alex told us that...",
-      hint: "bought -> had bought, two years ago -> two years earlier / two years before",
+      direct: "Tom: 'What time does the last flight depart?'",
+      lead: "Tom asked...",
+      hint: "does depart -> departed, no 'does' in reported question",
       accepted: [
-        "he had bought his car two years earlier",
-        "he had bought his car two years before"
+        "what time the last flight departed"
       ]
     },
     {
       id: 11,
-      direct: "Lisa: 'It was raining heavily when I left home.'",
-      lead: "Lisa said that...",
-      hint: "was raining -> had been raining, left -> had left / left",
+      direct: "Mother: 'Please don't touch the hot stove!'",
+      lead: "Mother told me...",
+      hint: "Taqiq: not to touch the hot stove",
       accepted: [
-        "it had been raining heavily when she left home",
-        "it had been raining heavily when she had left home"
+        "not to touch the hot stove"
       ]
     },
     {
       id: 12,
-      direct: "Mark: 'I will call you as soon as the flight lands.'",
-      lead: "Mark promised that...",
-      hint: "will call -> would call, lands -> landed",
+      direct: "Boss: 'Send the final contract today before 5 PM.'",
+      lead: "The boss told me...",
+      hint: "Buyruq: to send... today -> that day",
       accepted: [
-        "he would call me as soon as the flight landed"
+        "to send the final contract that day before 5 pm"
       ]
     },
     {
       id: 13,
-      direct: "Jack: 'We were playing chess when the storm began.'",
-      lead: "Jack recalled that...",
-      hint: "were playing -> had been playing, began -> had begun / began",
+      direct: "Kate: 'We were having lunch when the power went out.'",
+      lead: "Kate explained that...",
+      hint: "were having -> had been having",
       accepted: [
-        "they had been playing chess when the storm began",
-        "they had been playing chess when the storm had begun"
+        "they had been having lunch when the power went out",
+        "they had been having lunch when the power had gone out"
       ]
     },
     {
       id: 14,
-      direct: "Sam: 'We had already finished our homework before the lesson started.'",
-      lead: "Sam said that...",
-      hint: "had already finished o'zgarishsiz qoladi",
+      direct: "Mike: 'I am going to start my own business next year.'",
+      lead: "Mike said that...",
+      hint: "am going to -> was going to, next year -> the following year / the next year",
       accepted: [
-        "they had already finished their homework before the lesson started",
-        "they had already finished their homework before the lesson had started"
+        "he was going to start his own business the following year",
+        "he was going to start his own business the next year"
       ]
     },
     {
       id: 15,
-      direct: "Anna: 'I cannot attend because I will be flying to Istanbul.'",
-      lead: "Anna explained that...",
-      hint: "cannot -> could not, will be flying -> would be flying",
+      direct: "Lucy: 'Have you ever seen this movie before?'",
+      lead: "Lucy asked me...",
+      hint: "if / whether + I had ever seen that movie before",
       accepted: [
-        "she could not attend because she would be flying to istanbul",
-        "she couldn't attend because she would be flying to istanbul"
+        "if i had ever seen that movie before",
+        "whether i had ever seen that movie before"
       ]
     }
   ];
 
-  // 10 PAST & FUTURE ERROR HUNT ITEMS
+  // 10 REPORTED SPEECH ERROR HUNT ITEMS
   const ERROR_ITEMS = [
     {
       id: 1,
-      bad: "He told that he will be waiting for us tomorrow.",
-      hint: "told us yoki said that; va o'tmishda will -> would; tomorrow -> the next day.",
+      bad: "He told that he will call me tomorrow.",
+      hint: "told us yoki said that; will -> would; tomorrow -> the next day / the following day.",
       correctVariants: [
-        "he said that he would be waiting for us the next day",
-        "he told us that he would be waiting for us the next day",
-        "he said that he would be waiting for us the following day"
+        "he said that he would call me the next day",
+        "he said that he would call me the following day",
+        "he told me that he would call me the next day",
+        "he told me that he would call me the following day"
       ]
     },
     {
       id: 2,
       bad: "She asked me where did I live.",
-      hint: "Savol so'z tartibi o'zlashtirma gapda to'g'ri darak tartibiga o'tadi (inversiya yo'qoladi).",
-      correctVariants: ["she asked me where i lived"]
+      hint: "Savol so'z tartibi o'zlashtirma gapda to'g'ri darak tartibiga o'tadi (did I live emas, I lived).",
+      correctVariants: [
+        "she asked me where i lived"
+      ]
     },
     {
       id: 3,
-      bad: "They asked whether was I ready.",
-      hint: "whether dan keyin ega + fe'l: whether I was ready.",
-      correctVariants: ["they asked whether i was ready", "they asked if i was ready"]
+      bad: "The teacher asked whether was I ready for the test.",
+      hint: "whether dan keyin ega + fe'l keladi: whether I was ready (was I emas).",
+      correctVariants: [
+        "the teacher asked whether i was ready for the test",
+        "the teacher asked if i was ready for the test"
+      ]
     },
     {
       id: 4,
-      bad: "When I arrived at the station, the train already left.",
-      hint: "Yetib kelguncha poezd ketib bo'lgan edi: Past Perfect (had already left) kerak.",
-      correctVariants: ["when i arrived at the station the train had already left", "when i arrived at the station, the train had already left"]
+      bad: "He said me that he was tired.",
+      hint: "said me bo'lmaydi! said to me yoki told me bo'lishi kerak.",
+      correctVariants: [
+        "he told me that he was tired",
+        "he said that he was tired"
+      ]
     },
     {
       id: 5,
-      bad: "He promised he will call me yesterday.",
-      hint: "O'tmishdagi va'dada 'will' orqaga surilib 'would' bo'ladi.",
-      correctVariants: ["he promised he would call me yesterday", "he promised that he would call me yesterday"]
+      bad: "She asked what time was the train leaving.",
+      hint: "To'g'ri tartib: what time the train was leaving.",
+      correctVariants: [
+        "she asked what time the train was leaving"
+      ]
     },
     {
       id: 6,
-      bad: "I was going to called you, but I forgot.",
-      hint: "was going to dan keyin fe'lning 1-shakli (infinitive) keladi: was going to call.",
-      correctVariants: ["i was going to call you but i forgot", "i was going to call you, but i forgot"]
+      bad: "Mother told to me to clean my bedroom.",
+      hint: "'tell' fe'lidan keyin 'to' qo'yilmaydi: told me.",
+      correctVariants: [
+        "mother told me to clean my bedroom"
+      ]
     },
     {
       id: 7,
-      bad: "She asked what time was the train leaving.",
-      hint: "To'g'ri so'z tartibi: what time the train was leaving.",
-      correctVariants: ["she asked what time the train was leaving"]
+      bad: "He said he has lived here for five years.",
+      hint: "has lived -> had lived; here -> there.",
+      correctVariants: [
+        "he said he had lived there for five years",
+        "he said that he had lived there for five years"
+      ]
     },
     {
       id: 8,
-      bad: "He explained that he has finished the project yesterday.",
-      hint: "has finished -> had finished, yesterday -> the previous day / the day before.",
+      bad: "She asked me if could I lend her my dictionary.",
+      hint: "Darak tartib: if I could lend (if could I emas).",
       correctVariants: [
-        "he explained that he had finished the project the day before",
-        "he explained that he had finished the project the previous day"
+        "she asked me if i could lend her my dictionary",
+        "she asked me whether i could lend her my dictionary"
       ]
     },
     {
       id: 9,
-      bad: "By 2030, scientists will discovered a cure for the illness.",
-      hint: "Future Perfect formulasi: will have + V3 (will have discovered).",
-      correctVariants: ["by 2030 scientists will have discovered a cure for the illness", "by 2030, scientists will have discovered a cure for the illness"]
+      bad: "The manager promised that he will solve the issue yesterday.",
+      hint: "will -> would; yesterday -> the day before / the previous day.",
+      correctVariants: [
+        "the manager promised that he would solve the issue the day before",
+        "the manager promised that he would solve the issue the previous day"
+      ]
     },
     {
       id: 10,
-      bad: "She asked me if could I lend her my pen.",
-      hint: "Darak tartib: if I could lend (not if could I).",
-      correctVariants: ["she asked me if i could lend her my pen", "she asked me whether i could lend her my pen"]
+      bad: "He denied to steal the diamond necklace.",
+      hint: "deny dan keyin V-ing keladi: denied stealing.",
+      correctVariants: [
+        "he denied stealing the diamond necklace"
+      ]
     }
   ];
 
-  // 10 PAST VS FUTURE TENSES MCQS (REPLACED OLD REPORTING VERBS)
-  const PAST_FUTURE_MCQ_ITEMS = [
+  // 10 REPORTED SPEECH MCQS
+  const MCQ_ITEMS = [
     {
       id: 1,
-      q: "By the time we finally reached the cinema, the film ______ already ______ .",
-      opts: ["had / started", "has / started", "was / starting", "will / start"],
-      ans: "had / started",
-      expl: "O'tmishdagi boshqa bir vaqtdan/harakatdan oldin sodir bo'lgan ish: Past Perfect (had already started)."
+      q: "Sarah: 'I don't like spicy food.' -> Sarah said that she ______ spicy food.",
+      opts: ["doesn't like", "didn't like", "hadn't liked", "wouldn't like"],
+      ans: "didn't like",
+      expl: "Present Simple (don't like) -> Past Simple (didn't like) ga suriladi."
     },
     {
       id: 2,
-      q: "This time next Monday, I ______ on a sunny beach in Antalya.",
-      opts: ["will be relaxing", "relax", "am relaxed", "was relaxing"],
-      ans: "will be relaxing",
-      expl: "Kelajakdagi aniq bir vaqtda davom etayotgan jarayon: Future Continuous (will be + V-ing)."
+      q: "'Where are you working now?' -> He asked me where ______ then.",
+      opts: ["was I working", "I was working", "am I working", "I am working"],
+      ans: "I was working",
+      expl: "O'zlashtirma savollarda darak gap tartibi (ega + fe'l) qo'llanadi: 'where I was working'."
     },
     {
       id: 3,
-      q: "I will notify you as soon as the manager ______ at the office.",
-      opts: ["arrives", "will arrive", "arrived", "is going to arrive"],
-      ans: "arrives",
-      expl: "Vaqt ergash gaplarida (as soon as, when, before, after) kelajak ma'nosida Present Simple ishlatiladi."
+      q: "'Have you seen my car keys?' -> She asked me ______ her car keys.",
+      opts: ["if I had seen", "did I see", "if I saw", "had I seen"],
+      ans: "if I had seen",
+      expl: "Yes/No savollarda 'if' yoki 'whether' qo'yiladi va Present Perfect -> Past Perfect ga o'tadi."
     },
     {
       id: 4,
-      q: "While she ______ vegetables in the kitchen, she accidentally cut her finger.",
-      opts: ["was chopping", "chopped", "had chopped", "is chopping"],
-      ans: "was chopping",
-      expl: "O'tmishda davom etib turgan fon harakat (Past Continuous) to'satdan bo'lgan harakat (Past Simple) bilan to'xtatildi."
+      q: "'Be quiet!' -> The teacher ______ us to be quiet.",
+      opts: ["said", "told", "suggested", "explained"],
+      ans: "told",
+      expl: "Buyruq gaplarda: 'told someone to do something' ishlatiladi."
     },
     {
       id: 5,
-      q: "By the end of this academic year, she ______ from the university with top honors.",
-      opts: ["will have graduated", "graduated", "will graduate", "has graduated"],
-      ans: "will have graduated",
-      expl: "'By + future time' ko'rsatkichi kelajakdagi nuqtaga qadar tugallangan ishni bildiradi: Future Perfect (will have + V3)."
+      q: "'I will definitely attend the meeting.' -> He ______ to attend the meeting.",
+      opts: ["promised", "denied", "refused", "warned"],
+      ans: "promised",
+      expl: "Qat'iy va'da berish: 'promised to attend'."
     },
     {
       id: 6,
-      q: "How long ______ you ______ English before you moved to London in 2022?",
-      opts: ["had / been studying", "have / studied", "did / study", "were / studying"],
-      ans: "had / been studying",
-      expl: "2022-yilda ko'chib o'tgunga qadar davom etgan muddat jarayoni: Past Perfect Continuous."
+      q: "'I didn't take your jacket!' -> He ______ taking my jacket.",
+      opts: ["denied", "refused", "admitted", "promised"],
+      ans: "denied",
+      expl: "Qilinmagan ishni inkor etish: 'denied + V-ing'."
     },
     {
       id: 7,
-      q: "Look at those dark thunderstorm clouds! It ______ heavily in a few minutes.",
-      opts: ["is going to rain", "will rain", "rains", "rained"],
-      ans: "is going to rain",
-      expl: "Ko'z oldidagi aniq dalil/alomatga (qora bulutlar) asoslangan bashorat: be going to."
+      q: "'Don't forget to submit your report today.' -> She reminded me ______ my report that day.",
+      opts: ["to submit", "submitting", "submit", "that I submit"],
+      ans: "to submit",
+      expl: "'remind someone to do something' formulasi."
     },
     {
       id: 8,
-      q: "We ______ in the garden all morning yesterday, which is why our clothes were covered in mud.",
-      opts: ["had been working", "have worked", "will work", "are working"],
-      ans: "had been working",
-      expl: "O'tmishdagi ko'rinib turgan natija (loy kiyimlar) o'sha paytgacha davom etgan harakat natijasi: had been working."
+      q: "He asked me what time ______ .",
+      opts: ["the lesson started", "did the lesson start", "started the lesson", "does the lesson start"],
+      ans: "the lesson started",
+      expl: "Inversiyasiz to'g'ri darak tartibi: ega (the lesson) + fe'l (started)."
     },
     {
       id: 9,
-      q: "She promised me that she ______ call her parents as soon as she arrived.",
-      opts: ["would", "will", "is going to", "had"],
-      ans: "would",
-      expl: "O'tmishdan kelajakka berilgan va'da (Future in the Past): would + V1."
+      q: "'I can help you tomorrow.' -> He said that he ______ help me the following day.",
+      opts: ["could", "can", "will", "would have"],
+      ans: "could",
+      expl: "can -> could ga aylanadi."
     },
     {
       id: 10,
-      q: "When my grandfather was young, he ______ walk 10 kilometers to school every morning.",
-      opts: ["would", "will", "was used", "is used to"],
-      ans: "would",
-      expl: "O'tmishdagi odatiy takroriy harakatlar uchun 'would' yoki 'used to' ishlatiladi."
+      q: "'No, I won't wash the dishes!' -> The teenager ______ to wash the dishes.",
+      opts: ["refused", "denied", "promised", "reminded"],
+      ans: "refused",
+      expl: "Biror ishni qilishdan bosh tortish: 'refused to do'."
     }
   ];
 
-  // 8 CONTEXTUAL TRANSLATION ITEMS (STRICTLY PAST & FUTURE)
+  // 8 CONTEXTUAL TRANSLATION ITEMS
   const TRANS_ITEMS = [
-    { id: 1, uz: "1. Men unga ertaga yordam berishimni va'da qildim.", placeholder: "I promised that I would help him/her the next day..." },
-    { id: 2, uz: "2. Ular uyni sotmoqchi edilar, lekin oxirgi lahzada fikrlaridan qaytdilar.", placeholder: "They were going to sell the house, but they changed their mind at the last moment..." },
-    { id: 3, uz: "3. Poezd soat 6:00 da jo'nashi kerak edi, lekin signal xatosi tufayli kechikdi.", placeholder: "The train was going to depart at 6:00, but it was delayed due to a signal failure..." },
-    { id: 4, uz: "4. Men u yerga yetib borganimda, majlis allaqachon boshlangan edi.", placeholder: "When I arrived there, the meeting had already started..." },
-    { id: 5, uz: "5. U 2020-yildan beri o'sha kompaniyada ishlab kelayotganini aytdi.", placeholder: "He said that he had been working at that company since 2020..." },
-    { id: 6, uz: "6. Ertaga bu vaqtda u samolyotda Londonga uchayotgan bo'ladi.", placeholder: "This time tomorrow, she will be flying to London..." },
-    { id: 7, uz: "7. U kecha soat 8 da uyga kelganida, yomg'ir qattiq yog'ayotgan edi.", placeholder: "When he came home at 8 yesterday, it was raining heavily..." },
-    { id: 8, uz: "8. Kelasi yilning oxirigacha u yangi uy sotib olgan bo'ladi.", placeholder: "By the end of next year, he will have bought a new house..." }
+    { id: 1, uz: "1. U menga ertaga Toshkentga uchib ketishini aytdi.", placeholder: "He told me that he would fly to Tashkent the following day..." },
+    { id: 2, uz: "2. Shifokor mendan har kuni ertalab dori ichayotganimni so'radi.", placeholder: "The doctor asked me if/whether I was taking medicine every morning..." },
+    { id: 3, uz: "3. Direktor hujjatlarni o'sha kuni soat 5 gacha imzolashini va'da berdi.", placeholder: "The director promised that he would sign the documents that day before 5..." },
+    { id: 4, uz: "4. U mendan aeroportga qanday borish mumkinligini so'radi.", placeholder: "He asked me how he could get to the airport..." },
+    { id: 5, uz: "5. Onam menga kechqurun ko'chada yolg'iz yurmaslikni tayinladi (buyurdi).", placeholder: "My mother told me not to walk alone in the street at night..." },
+    { id: 6, uz: "6. Ali do'stining telefonini sindirib qo'yganini tan oldi.", placeholder: "Ali admitted having broken / breaking his friend's phone..." },
+    { id: 7, uz: "7. Ular o'tgan yili yangi uy sotib olganliklarini tushuntirdilar.", placeholder: "They explained that they had bought a new house the previous year..." },
+    { id: 8, uz: "8. Professor talabalarga imtihon paytida telefondan foydalanmaslikni buyurdi.", placeholder: "The professor ordered/told the students not to use phones during the exam..." }
   ];
 
-  // STATE TRACKING
+  // USER STATE
   let userResponses = {
-    fitp: {},
+    sayTell: {},
     transforms: {},
     errorHunt: {},
-    pastFutureMcq: {},
+    mcq: {},
     translations: {},
     narrative: ""
   };
@@ -790,22 +826,22 @@
 
   function init() {
     renderVocab();
-    renderFitp();
+    renderSayTell();
     renderTransforms();
     renderErrorHunt();
-    renderPastFutureMcq();
+    renderMcq();
     renderTranslations();
     loadDraft();
     updateLiveScore();
   }
 
   function renderVocab() {
-    const grid = document.getElementById('vocabGrid');
-    grid.innerHTML = VOCAB_DATA.map(v => `
+    const c = document.getElementById('vocabGrid');
+    c.innerHTML = VOCAB_DATA.map(v => `
       <div class="vocab-card">
         <div class="vocab-top">
           <span class="vocab-word">${v.word}</span>
-          <button class="vocab-audio-btn" onclick="speak('${v.word.replace(/'/g, "\\'")}')">🔊 Audio</button>
+          <button class="vocab-audio-btn" onclick="speak('${v.word.replace(/'/g, "\\'")}')">🔊 Tinglash</button>
         </div>
         <div class="vocab-uz">${v.uz}</div>
         <div class="vocab-ex">${v.ex}</div>
@@ -813,45 +849,50 @@
     `).join('');
   }
 
-  function renderFitp() {
-    const c = document.getElementById('fitpContainer');
-    c.innerHTML = FITP_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_fitp_${item.id}">
-        <div class="q-num">Qaror #${idx + 1} / 15</div>
-        <div class="q-prompt">${item.prompt.replace('______', '<code>[ ? ]</code>')}</div>
+  function renderSayTell() {
+    const c = document.getElementById('sayTellContainer');
+    c.innerHTML = SAY_TELL_ITEMS.map(item => `
+      <div class="q-card" id="card_saytell_${item.id}">
+        <div class="q-num">Savol ${item.id} / 15</div>
+        <div class="q-prompt">${item.prompt.replace('______', '<code>______</code>')}</div>
         <div class="btn-group">
           ${item.opts.map(opt => `
-            <button class="choice-btn" id="btn_fitp_${item.id}_${opt.replace(/\s+/g, '_')}" onclick="handleFitpChoice(${item.id}, '${opt}')">${opt}</button>
+            <button class="choice-btn" id="btn_saytell_${item.id}_${opt.replace(/\s+/g,'_')}" onclick="checkSayTell(${item.id}, '${opt}')">
+              ${opt}
+            </button>
           `).join('')}
         </div>
-        <div class="expl-box" id="expl_fitp_${item.id}"></div>
+        <div class="expl-box" id="expl_saytell_${item.id}"></div>
       </div>
     `).join('');
   }
 
-  function handleFitpChoice(id, chosen) {
-    const item = FITP_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_fitp_' + id);
-    const expl = document.getElementById('expl_fitp_' + id);
+  function checkSayTell(id, chosen) {
+    const item = SAY_TELL_ITEMS.find(x => x.id === id);
+    const card = document.getElementById('card_saytell_' + id);
+    const expl = document.getElementById('expl_saytell_' + id);
+    const isCorrect = chosen === item.ans;
+
+    userResponses.sayTell[id] = { chosen, isCorrect };
 
     item.opts.forEach(opt => {
-      const b = document.getElementById('btn_fitp_' + id + '_' + opt.replace(/\s+/g, '_'));
-      b.disabled = true;
-      if (opt === item.ans) b.classList.add('selected-correct');
+      const btn = document.getElementById(`btn_saytell_${id}_${opt.replace(/\s+/g,'_')}`);
+      btn.className = 'choice-btn';
+      if (opt === item.ans) {
+        if (isCorrect) btn.className = 'choice-btn selected-correct';
+      } else if (opt === chosen && !isCorrect) {
+        btn.className = 'choice-btn selected-wrong';
+      }
     });
 
-    const isCorrect = chosen === item.ans;
-    userResponses.fitp[id] = { chosen, isCorrect, correctAns: item.ans };
-
     if (isCorrect) {
-      card.classList.add('correct');
+      card.className = 'q-card correct';
       expl.className = 'expl-box show correct';
       expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
     } else {
-      card.classList.add('wrong');
-      document.getElementById('btn_fitp_' + id + '_' + chosen.replace(/\s+/g, '_')).classList.add('selected-wrong');
+      card.className = 'q-card wrong';
       expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato.</b> ' + item.expl;
+      expl.innerHTML = '❌ <b>Xato tanlov.</b> ' + item.expl;
     }
 
     updateLiveScore();
@@ -860,54 +901,52 @@
 
   function renderTransforms() {
     const c = document.getElementById('transformContainer');
-    c.innerHTML = TRANSFORM_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_transf_${item.id}">
-        <div class="q-num">Transformatsiya #${idx + 1} / 15</div>
-        <div class="q-prompt" style="color:#e9d5ff;">💬 ${item.direct}</div>
-        <div style="font-size:0.83rem; color:#94a3b8; margin-bottom:6px;">Boshlanishi: <b>${item.lead}</b></div>
+    c.innerHTML = TRANSFORM_ITEMS.map(item => `
+      <div class="q-card" id="card_trans_${item.id}">
+        <div class="q-num">Transformatsiya ${item.id} / 15</div>
+        <div class="q-prompt" style="color:#c4b5fd;"><b>Direct:</b> <i>"${item.direct.replace(/^.*?: '/, '').replace(/'$/, '')}"</i></div>
+        <div style="font-size:0.86rem; color:#94a3b8; margin-bottom:6px;"><b>Boshlanishi:</b> ${item.lead}</div>
         <div class="input-wrap">
-          <input type="text" id="input_transf_${item.id}" placeholder="${item.hint}" onkeydown="if(event.key==='Enter') checkTransform(${item.id})">
+          <input type="text" id="input_trans_${item.id}" placeholder="Davomini yozing..." onkeydown="if(event.key==='Enter') checkTransform(${item.id})">
           <button class="check-btn" onclick="checkTransform(${item.id})">Tekshirish</button>
         </div>
-        <div class="expl-box" id="expl_transf_${item.id}"></div>
+        <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">💡 Qoida: ${item.hint}</div>
+        <div class="expl-box" id="expl_trans_${item.id}"></div>
       </div>
     `).join('');
   }
 
+  function cleanText(str) {
+    return str.toLowerCase()
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?'"]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function checkTransform(id) {
     const item = TRANSFORM_ITEMS.find(x => x.id === id);
-    const input = document.getElementById('input_transf_' + id);
-    const card = document.getElementById('card_transf_' + id);
-    const expl = document.getElementById('expl_transf_' + id);
+    const val = document.getElementById('input_trans_' + id).value.trim();
+    const card = document.getElementById('card_trans_' + id);
+    const expl = document.getElementById('expl_trans_' + id);
 
-    let val = input.value.trim().toLowerCase().replace(/[.,!?;:]/g, '');
-    const leadClean = item.lead.toLowerCase().replace(/that\.\.\.|\.\.\.|:/g, '').trim();
-    if (val.startsWith(leadClean)) {
-      val = val.substring(leadClean.length).trim();
-    }
-    if (val.startsWith('that ')) {
-      val = val.substring(5).trim();
+    if (!val) {
+      alert("Iltimos, avval javobingizni yozing!");
+      return;
     }
 
-    if (!val) return;
+    const cleanedUser = cleanText(val);
+    const isCorrect = item.accepted.some(acc => cleanText(acc) === cleanedUser);
 
-    const isCorrect = item.accepted.some(acc => {
-      let a = acc.toLowerCase().replace(/[.,!?;:]/g, '');
-      if (a.startsWith('that ')) a = a.substring(5).trim();
-      return a === val;
-    });
+    userResponses.transforms[id] = { text: val, isCorrect };
 
-    userResponses.transforms[id] = { typed: input.value.trim(), isCorrect, expected: item.accepted[0] };
-
-    card.classList.remove('correct', 'wrong');
     if (isCorrect) {
-      card.classList.add('correct');
+      card.className = 'q-card correct';
       expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>Mukammal!</b> Barcha zamon orqaga surilishi to\'g\'ri bajarildi.';
+      expl.innerHTML = '✅ <b>Ajoyib, mukammal o\'zgarish!</b> Backshift va olmoshlar to\'g\'ri moslashtirildi.';
     } else {
-      card.classList.add('wrong');
+      card.className = 'q-card wrong';
       expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xatolik bor.</b> To\'g\'ri variant: <i>"' + item.lead + ' ' + item.accepted[0] + '"</i>';
+      expl.innerHTML = '❌ <b>Qayta urinib ko\'ring.</b> Qabul qilinadigan namuna: <i>"' + item.accepted[0] + '"</i>';
     }
 
     updateLiveScore();
@@ -916,15 +955,13 @@
 
   function renderErrorHunt() {
     const c = document.getElementById('errorHuntContainer');
-    c.innerHTML = ERROR_ITEMS.map((item, idx) => `
+    c.innerHTML = ERROR_ITEMS.map(item => `
       <div class="q-card" id="card_err_${item.id}">
-        <div class="q-num">Qopqon #${idx + 1} / 10</div>
-        <div class="q-prompt" style="color:#fca5a5; text-decoration:line-through; font-style:italic;">
-          ❌ "${item.bad}"
-        </div>
-        <div style="font-size:0.83rem; color:#94a3b8; margin-bottom:8px;">💡 Maslahat: ${item.hint}</div>
+        <div class="q-num">Qopqon ${item.id} / 10</div>
+        <div class="q-prompt" style="color:#fca5a5;">❌ <code>${item.bad}</code></div>
+        <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;">💡 Maslahat: ${item.hint}</div>
         <div class="input-wrap">
-          <input type="text" id="input_err_${item.id}" placeholder="To'g'rilangan to'liq gapni yozing..." onkeydown="if(event.key==='Enter') checkErrorHunt(${item.id})">
+          <input type="text" id="input_err_${item.id}" placeholder="To'liq to'g'rilangan gapni yozing..." onkeydown="if(event.key==='Enter') checkErrorHunt(${item.id})">
           <button class="check-btn" onclick="checkErrorHunt(${item.id})">Tekshirish</button>
         </div>
         <div class="expl-box" id="expl_err_${item.id}"></div>
@@ -934,71 +971,78 @@
 
   function checkErrorHunt(id) {
     const item = ERROR_ITEMS.find(x => x.id === id);
-    const input = document.getElementById('input_err_' + id);
+    const val = document.getElementById('input_err_' + id).value.trim();
     const card = document.getElementById('card_err_' + id);
     const expl = document.getElementById('expl_err_' + id);
 
-    const val = input.value.trim().toLowerCase().replace(/[.,!?;:]/g, '');
-    if (!val) return;
+    if (!val) {
+      alert("Iltimos, to'g'rilangan gapni yozing!");
+      return;
+    }
 
-    const isCorrect = item.correctVariants.some(v => v.toLowerCase().replace(/[.,!?;:]/g, '') === val);
-    userResponses.errorHunt[id] = { typed: input.value.trim(), isCorrect, expected: item.correctVariants[0] };
+    const cleanedUser = cleanText(val);
+    const isCorrect = item.correctVariants.some(acc => cleanText(acc) === cleanedUser);
 
-    card.classList.remove('correct', 'wrong');
+    userResponses.errorHunt[id] = { text: val, isCorrect };
+
     if (isCorrect) {
-      card.classList.add('correct');
+      card.className = 'q-card correct';
       expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>Ajoyib!</b> Zamon xatosi to\'liq tuzatildi.';
+      expl.innerHTML = '✅ <b>Xato to\'g\'ri bartaraf etildi!</b>';
     } else {
-      card.classList.add('wrong');
+      card.className = 'q-card wrong';
       expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Yetarlicha to\'g\'ri emas.</b> Kutilgan variant: <i>"' + item.correctVariants[0] + '"</i>';
+      expl.innerHTML = '❌ <b>Kutilgan javob:</b> <i>"' + item.correctVariants[0] + '"</i>';
     }
 
     updateLiveScore();
     saveDraft();
   }
 
-  function renderPastFutureMcq() {
-    const c = document.getElementById('pastFutureMcqContainer');
-    c.innerHTML = PAST_FUTURE_MCQ_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_pf_${item.id}">
-        <div class="q-num">Zamon Testi #${idx + 1} / 10</div>
+  function renderMcq() {
+    const c = document.getElementById('mcqContainer');
+    c.innerHTML = MCQ_ITEMS.map(item => `
+      <div class="q-card" id="card_mcq_${item.id}">
+        <div class="q-num">Test ${item.id} / 10</div>
         <div class="q-prompt">${item.q}</div>
         <div class="btn-group">
-          ${item.opts.map((opt, oIdx) => `
-            <button class="choice-btn" id="btn_pf_${item.id}_${oIdx}" onclick="handlePastFutureChoice(${item.id}, ${oIdx})">${opt}</button>
+          ${item.opts.map(opt => `
+            <button class="choice-btn" id="btn_mcq_${item.id}_${opt.replace(/\s+/g,'_')}" onclick="checkMcq(${item.id}, '${opt.replace(/'/g, "\\'")}')">
+              ${opt}
+            </button>
           `).join('')}
         </div>
-        <div class="expl-box" id="expl_pf_${item.id}"></div>
+        <div class="expl-box" id="expl_mcq_${item.id}"></div>
       </div>
     `).join('');
   }
 
-  function handlePastFutureChoice(id, optIdx) {
-    const item = PAST_FUTURE_MCQ_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_pf_' + id);
-    const chosenText = item.opts[optIdx];
-    const expl = document.getElementById('expl_pf_' + id);
+  function checkMcq(id, chosen) {
+    const item = MCQ_ITEMS.find(x => x.id === id);
+    const card = document.getElementById('card_mcq_' + id);
+    const expl = document.getElementById('expl_mcq_' + id);
+    const isCorrect = chosen === item.ans;
 
-    item.opts.forEach((_, i) => {
-      const b = document.getElementById('btn_pf_' + id + '_' + i);
-      b.disabled = true;
-      if (item.opts[i] === item.ans) b.classList.add('selected-correct');
+    userResponses.mcq[id] = { chosen, isCorrect };
+
+    item.opts.forEach(opt => {
+      const btn = document.getElementById(`btn_mcq_${id}_${opt.replace(/\s+/g,'_')}`);
+      btn.className = 'choice-btn';
+      if (opt === item.ans) {
+        if (isCorrect) btn.className = 'choice-btn selected-correct';
+      } else if (opt === chosen && !isCorrect) {
+        btn.className = 'choice-btn selected-wrong';
+      }
     });
 
-    const isCorrect = chosenText === item.ans;
-    userResponses.pastFutureMcq[id] = { chosen: chosenText, isCorrect, correctAns: item.ans };
-
     if (isCorrect) {
-      card.classList.add('correct');
+      card.className = 'q-card correct';
       expl.className = 'expl-box show correct';
       expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
     } else {
-      card.classList.add('wrong');
-      document.getElementById('btn_pf_' + id + '_' + optIdx).classList.add('selected-wrong');
+      card.className = 'q-card wrong';
       expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato tanlov.</b> ' + item.expl;
+      expl.innerHTML = '❌ <b>Xato variant.</b> ' + item.expl;
     }
 
     updateLiveScore();
@@ -1018,12 +1062,12 @@
   function updateLiveScore() {
     let score = 0;
     let answered = 0;
-    const total = FITP_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + PAST_FUTURE_MCQ_ITEMS.length; // 15 + 15 + 10 + 10 = 50 auto-graded items
+    const total = SAY_TELL_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + MCQ_ITEMS.length; // 15 + 15 + 10 + 10 = 50
 
-    Object.values(userResponses.fitp).forEach(r => { answered++; if (r.isCorrect) score++; });
+    Object.values(userResponses.sayTell).forEach(r => { answered++; if (r.isCorrect) score++; });
     Object.values(userResponses.transforms).forEach(r => { answered++; if (r.isCorrect) score++; });
     Object.values(userResponses.errorHunt).forEach(r => { answered++; if (r.isCorrect) score++; });
-    Object.values(userResponses.pastFutureMcq).forEach(r => { answered++; if (r.isCorrect) score++; });
+    Object.values(userResponses.mcq).forEach(r => { answered++; if (r.isCorrect) score++; });
 
     document.getElementById('liveScoreBadge').innerText = score + ' / ' + total;
     document.getElementById('progressInfoText').innerText = 'Javob berildi: ' + answered + ' / ' + total + ' (' + Math.round((answered/total)*100) + '%)';
@@ -1084,34 +1128,34 @@
     status.innerText = "Telegram botga hisobot uzatilmoqda...";
 
     let score = 0;
-    const total = FITP_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + PAST_FUTURE_MCQ_ITEMS.length;
-    Object.values(userResponses.fitp).forEach(r => { if (r.isCorrect) score++; });
+    const total = SAY_TELL_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + MCQ_ITEMS.length;
+    Object.values(userResponses.sayTell).forEach(r => { if (r.isCorrect) score++; });
     Object.values(userResponses.transforms).forEach(r => { if (r.isCorrect) score++; });
     Object.values(userResponses.errorHunt).forEach(r => { if (r.isCorrect) score++; });
-    Object.values(userResponses.pastFutureMcq).forEach(r => { if (r.isCorrect) score++; });
+    Object.values(userResponses.mcq).forEach(r => { if (r.isCorrect) score++; });
 
     const pct = Math.round((score / total) * 100);
 
-    let msg = "🔮 *VAZIFA HISOBOTI: B1 PAST & FUTURE TENSES MASTERY*\n";
+    let msg = "🗣 *VAZIFA HISOBOTI: B1 REPORTED SPEECH MASTERY*\n";
     msg += "━━━━━━━━━━━━━━━━━━━━\n";
-    msg += "👤 *O'quvchi:* " + name + " (" + (username || "username ko'rsatilmadi") + ")\n";
+    msg += "👤 *O'quvchi:* " + name + " (" + (username || "username yo'q") + ")\n";
     msg += "🎯 *Natija:* " + score + " / " + total + " (" + pct + "%)\n";
     msg += "⏰ *Sana:* " + new Date().toLocaleString('uz-UZ') + "\n\n";
 
     msg += "📊 *BO'LIMLAR BO'YICHA:*\n";
-    msg += "• Was/Were Going to vs Would: " + Object.values(userResponses.fitp).filter(r=>r.isCorrect).length + " / " + FITP_ITEMS.length + "\n";
-    msg += "• Past/Future Transformations: " + Object.values(userResponses.transforms).filter(r=>r.isCorrect).length + " / " + TRANSFORM_ITEMS.length + "\n";
-    msg += "• Qopqonlarni Tuzatish: " + Object.values(userResponses.errorHunt).filter(r=>r.isCorrect).length + " / " + ERROR_ITEMS.length + "\n";
-    msg += "• Past vs Future Tenses MCQ: " + Object.values(userResponses.pastFutureMcq).filter(r=>r.isCorrect).length + " / " + PAST_FUTURE_MCQ_ITEMS.length + "\n\n";
+    msg += "• Say vs Tell & Reporting Verbs: " + Object.values(userResponses.sayTell).filter(r=>r.isCorrect).length + " / " + SAY_TELL_ITEMS.length + "\n";
+    msg += "• Direct to Reported Transformations: " + Object.values(userResponses.transforms).filter(r=>r.isCorrect).length + " / " + TRANSFORM_ITEMS.length + "\n";
+    msg += "• Qopqonlarni Tuzatish (Error Hunt): " + Object.values(userResponses.errorHunt).filter(r=>r.isCorrect).length + " / " + ERROR_ITEMS.length + "\n";
+    msg += "• Reported Speech MCQs: " + Object.values(userResponses.mcq).filter(r=>r.isCorrect).length + " / " + MCQ_ITEMS.length + "\n\n";
 
-    msg += "✍️ *TARJIMALAR:*\n";
+    msg += "✍️ *TARJIMALAR (8 ta):*\n";
     TRANS_ITEMS.forEach(t => {
       const val = document.getElementById('trans_' + t.id)?.value.trim() || "—";
       msg += t.id + ". " + val + "\n";
     });
     msg += "\n";
 
-    msg += "📝 *HIKOYA INSHOSI:*\n";
+    msg += "📝 *SUHBAT HIKOYASI (INSHO):*\n";
     const narr = document.getElementById('essayNarrative').value.trim() || "—";
     msg += narr + "\n";
 
