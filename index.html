@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B1 Reported Speech (O'zlashtirma Gap) Mastery Lab | Ulunur's English</title>
+  <title>B1 Can, Could, Be Able To & 30 Irregular Verbs (61-90) | Ulunur's English Lab</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
                         radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.14) 0%, transparent 45%);
       background-attachment: fixed;
     }
-    .container { max-width: 940px; margin: 0 auto; padding: 20px 16px; }
+    .container { max-width: 960px; margin: 0 auto; padding: 20px 16px; }
 
     header {
       background: linear-gradient(135deg, #0e172a 0%, #2e1065 50%, #0f172a 100%);
@@ -48,22 +48,42 @@
       border-radius: var(--radius-lg); padding: 26px 24px; margin-bottom: 20px;
       box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(139, 92, 246, 0.3);
     }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
     .badge {
       font-size: 0.74rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-    .badge-topic { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(196, 181, 253, 0.4); }
-    .badge-mastery { background: rgba(16, 185, 129, 0.18); color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.35); }
-    .badge-interactive { background: rgba(245, 158, 11, 0.18); color: #fde68a; border: 1px solid rgba(253, 230, 138, 0.35); }
+    .badge-level { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(196, 181, 253, 0.4); }
+    .badge-topic { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(165, 180, 252, 0.35); }
+    .badge-interactive { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.35); }
 
     h1 {
-      font-size: 1.85rem; font-weight: 900; margin-bottom: 6px; line-height: 1.25;
-      background: linear-gradient(135deg, #ffffff 40%, #e9d5ff 80%, #a855f7 100%);
+      font-size: 1.85rem; font-weight: 900; margin-bottom: 8px; line-height: 1.25;
+      background: linear-gradient(135deg, #ffffff 40%, #ddd6fe 80%, #a78bfa 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .subtitle { color: var(--text-muted); font-size: 0.92rem; max-width: 820px; }
+    .subtitle { color: #cbd5e1; font-size: 0.95rem; max-width: 860px; }
 
+    /* TEACHING CHEAT SHEET CARDS */
+    .cheat-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 18px;
+    }
+    .cheat-card {
+      background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md);
+      padding: 14px 16px; font-size: 0.88rem;
+    }
+    .cheat-title { font-weight: 800; color: #a78bfa; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+    .cheat-rule { color: #e2e8f0; font-weight: 600; margin-bottom: 4px; }
+    .cheat-ex { color: #94a3b8; font-size: 0.82rem; font-style: italic; }
+
+    /* UZ TRAP ALERT */
+    .trap-box {
+      margin-top: 14px; background: rgba(239, 68, 68, 0.12); border-left: 4px solid var(--rose);
+      padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; color: #fecaca;
+    }
+    .trap-title { font-weight: 800; color: #f87171; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+
+    /* STUDENT INFO */
     .student-card {
       background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md);
       padding: 16px 20px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 14px;
@@ -80,130 +100,152 @@
 
     /* STICKY REALTIME SCORE & PROGRESS BAR */
     .sticky-score-bar {
-      position: sticky;
-      top: 12px;
-      z-index: 50;
-      background: rgba(15, 23, 42, 0.94);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(139, 92, 246, 0.35);
-      border-radius: var(--radius-md);
-      padding: 12px 18px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
+      position: sticky; top: 12px; z-index: 50; background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(14px); border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: var(--radius-md); padding: 12px 18px; margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
     .score-left { display: flex; align-items: center; gap: 12px; }
     .score-badge { background: var(--primary); color: #fff; font-size: 1.15rem; font-weight: 900; padding: 4px 14px; border-radius: 8px; }
-    .progress-info { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 4px; }
-    .progress-bar-wrap { width: 180px; height: 8px; background: #1e293b; border-radius: 999px; overflow: hidden; }
-    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--emerald), var(--primary)); transition: width 0.3s ease; }
+    .progress-info { font-size: 0.88rem; font-weight: 700; color: #c4b5fd; }
+    .progress-bar-wrap { width: 100%; height: 6px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; margin-top: 6px; }
+    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #8b5cf6, #10b981); transition: width 0.3s ease; }
 
-    /* SECTION BOXES */
+    /* SECTION BOX */
     .section-box {
       background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
-      padding: 24px; margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      padding: 24px 20px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
     .sec-title {
-      display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
-      font-size: 1.25rem; font-weight: 800; color: #fff;
+      font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 10px;
     }
-    .sec-desc { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 18px; line-height: 1.5; }
-    .rule-banner {
-      background: rgba(99, 102, 241, 0.1); border-left: 3px solid var(--accent);
-      padding: 10px 14px; border-radius: 6px; font-size: 0.84rem; color: #c7d2fe; margin-bottom: 18px;
-    }
-    .backshift-table {
-      width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.82rem;
-      border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
-    }
-    .backshift-table th, .backshift-table td {
-      padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border);
-    }
-    .backshift-table th { background: rgba(139, 92, 246, 0.15); color: #c4b5fd; font-weight: 800; }
-    .backshift-table td code { font-family: 'JetBrains Mono', monospace; color: #6ee7b7; font-weight: 700; }
+    .sec-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.5; }
 
-    /* VOCABULARY GRID */
-    .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-    .vocab-card {
-      background: #090f1e; border: 1px solid var(--border); border-radius: var(--radius-sm);
-      padding: 12px 14px; transition: all 0.2s;
+    /* VERBS TABLE / SEARCH */
+    .verb-search-wrap { margin-bottom: 12px; display: flex; gap: 10px; }
+    .verb-search-input {
+      background: #090f1e; border: 1px solid var(--border); color: #fff; padding: 8px 14px;
+      border-radius: 8px; font-size: 0.88rem; width: 100%; max-width: 320px;
     }
-    .vocab-card:hover { border-color: var(--primary); transform: translateY(-2px); }
-    .vocab-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
-    .vocab-word { font-weight: 800; color: #c4b5fd; font-size: 0.95rem; }
-    .vocab-audio-btn {
-      background: rgba(139, 92, 246, 0.2); border: none; color: #c4b5fd;
-      padding: 4px 8px; border-radius: 6px; font-size: 0.72rem; cursor: pointer; font-weight: 700;
+    .verb-table-wrap {
+      overflow-x: auto; margin-bottom: 16px; border-radius: var(--radius-md); border: 1px solid var(--border);
+      max-height: 480px; overflow-y: auto;
     }
-    .vocab-audio-btn:hover { background: var(--primary); color: #fff; }
-    .vocab-uz { font-size: 0.82rem; color: #94a3b8; margin-bottom: 4px; }
-    .vocab-ex { font-size: 0.78rem; color: #cbd5e1; font-style: italic; }
+    table.verb-table {
+      width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; background: #090f1e;
+    }
+    table.verb-table th {
+      background: #131d33; padding: 10px 14px; font-weight: 800; color: #a78bfa; text-transform: uppercase; font-size: 0.76rem;
+      position: sticky; top: 0; z-index: 2;
+    }
+    table.verb-table td {
+      padding: 8px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1;
+    }
+    table.verb-table tr:hover td { background: rgba(139, 92, 246, 0.08); }
+    .verb-v1 { font-weight: 800; color: #fff; }
+    .verb-v2 { font-weight: 700; color: #fde68a; font-family: 'JetBrains Mono', monospace; }
+    .verb-v3 { font-weight: 800; color: #6ee7b7; font-family: 'JetBrains Mono', monospace; }
+    .verb-uz { color: #94a3b8; font-style: italic; }
+    .audio-btn {
+      background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.3); color: #c4b5fd;
+      border-radius: 6px; padding: 2px 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .audio-btn:hover { background: var(--primary); color: #fff; }
 
-    /* QUESTION CARDS */
+    /* QUESTIONS */
     .q-card {
       background: #090f1e; border: 1px solid var(--border); border-radius: var(--radius-md);
-      padding: 16px; margin-bottom: 14px; transition: all 0.2s ease;
+      padding: 16px 18px; margin-bottom: 14px; transition: all 0.2s;
     }
     .q-card.correct { border-color: var(--emerald); background: rgba(16, 185, 129, 0.05); }
     .q-card.wrong { border-color: var(--rose); background: rgba(239, 68, 68, 0.05); }
-
-    .q-num { font-size: 0.76rem; font-weight: 800; color: #a855f7; text-transform: uppercase; margin-bottom: 6px; }
-    .q-prompt { font-size: 0.95rem; font-weight: 700; color: #f1f5f9; margin-bottom: 10px; line-height: 1.5; }
-    .q-prompt code { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; padding: 2px 6px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.9em; }
+    .q-num { font-size: 0.75rem; font-weight: 800; color: var(--primary); text-transform: uppercase; margin-bottom: 4px; }
+    .q-prompt { font-size: 0.98rem; font-weight: 600; color: #fff; margin-bottom: 12px; }
+    .q-prompt code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: #a78bfa; font-family: 'JetBrains Mono', monospace; }
 
     .btn-group { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
     .choice-btn {
       background: #131d33; border: 1px solid var(--border); color: #e2e8f0;
-      padding: 8px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 700; cursor: pointer;
+      padding: 9px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
       transition: all 0.2s;
     }
-    .choice-btn:hover:not(:disabled) { background: #1c2742; border-color: var(--primary); color: #fff; }
-    .choice-btn.selected-correct { background: var(--emerald); border-color: var(--emerald); color: #fff; }
-    .choice-btn.selected-wrong { background: var(--rose); border-color: var(--rose); color: #fff; }
+    .choice-btn:hover:not(:disabled) { background: #1c2742; border-color: var(--primary); color: #fff; transform: translateY(-1px); }
+    .choice-btn.selected-correct { background: var(--emerald) !important; border-color: var(--emerald) !important; color: #fff !important; }
+    .choice-btn.selected-wrong { background: var(--rose) !important; border-color: var(--rose) !important; color: #fff !important; }
+    .choice-btn.reveal-correct { border: 1.5px solid var(--emerald) !important; color: #6ee7b7 !important; }
 
+    /* EXPLANATION BOX (INSTANT VISUAL FEEDBACK) */
     .expl-box {
-      font-size: 0.84rem; padding: 8px 12px; border-radius: 8px; margin-top: 8px; display: none; line-height: 1.5;
+      font-size: 0.88rem; padding: 12px 14px; border-radius: 8px; margin-top: 10px; display: none; line-height: 1.5;
     }
-    .expl-box.show { display: block; }
+    .expl-box.show { display: block; animation: fadeIn 0.2s ease-in-out; }
     .expl-box.correct { background: rgba(16, 185, 129, 0.12); color: #6ee7b7; border-left: 3px solid var(--emerald); }
     .expl-box.wrong { background: rgba(239, 68, 68, 0.12); color: #fca5a5; border-left: 3px solid var(--rose); }
 
-    .input-wrap { display: flex; gap: 8px; margin-top: 8px; }
+    /* MISTAKE HUNTER */
+    .hunter-sentence {
+      background: #131d33; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px;
+      padding: 12px 14px; margin-bottom: 12px; font-size: 1.05rem; font-weight: 700; color: #fca5a5;
+    }
+    .hunter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+
+    /* SCRAMBLE */
+    .scramble-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .scramble-chip {
+      background: #1e293b; border: 1px solid #334155; color: #f1f5f9; padding: 6px 14px; border-radius: 8px;
+      font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s;
+    }
+    .scramble-chip:hover:not(:disabled) { background: #334155; border-color: var(--primary); }
+    .scramble-chip.used { opacity: 0.3; pointer-events: none; }
+    .scramble-result-box {
+      background: #090f1e; border: 1.5px dashed #334155; border-radius: 8px; min-height: 44px;
+      padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px;
+    }
+    .scramble-item {
+      background: rgba(139, 92, 246, 0.25); border: 1px solid #8b5cf6; color: #ddd6fe;
+      padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; cursor: pointer;
+    }
+    .scramble-actions { display: flex; gap: 8px; margin-bottom: 10px; }
     .check-btn {
-      background: var(--primary); color: #fff; border: none; padding: 8px 16px; border-radius: 8px;
-      font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;
+      background: var(--primary); color: #fff; border: none; padding: 7px 16px; border-radius: 8px;
+      font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
     }
     .check-btn:hover { background: var(--primary-hover); }
-
-    /* TRANSLATION & ESSAY */
-    .trans-item { margin-bottom: 16px; }
-    .trans-prompt { font-size: 0.92rem; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
-    .essay-prompt {
-      background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: var(--radius-md); padding: 14px; margin-bottom: 12px;
+    .reset-btn {
+      background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 7px 14px; border-radius: 8px;
+      font-weight: 600; font-size: 0.85rem; cursor: pointer;
     }
-    .essay-prompt h4 { color: #c4b5fd; font-size: 0.95rem; margin-bottom: 6px; }
-    .essay-prompt p { color: var(--text-muted); font-size: 0.86rem; margin-bottom: 8px; }
+
+    /* TRANSLATION */
+    .trans-item { margin-bottom: 16px; background: #090f1e; border: 1px solid var(--border); padding: 14px; border-radius: var(--radius-md); }
+    .trans-prompt { font-size: 0.95rem; font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
+    .trans-hint { font-size: 0.8rem; color: #c4b5fd; margin-bottom: 8px; }
+    .trans-reveal-box {
+      background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px;
+      padding: 10px 14px; margin-top: 8px; font-size: 0.88rem; color: #6ee7b7; display: none;
+    }
 
     /* SUBMIT CARD */
     .submit-card {
       background: linear-gradient(135deg, #0f172a 0%, #2e1065 100%);
       border: 1px solid rgba(139, 92, 246, 0.4); border-radius: var(--radius-lg);
-      padding: 24px; text-align: center; margin-top: 30px;
+      padding: 26px; text-align: center; margin-top: 30px;
     }
     .submit-btn {
       background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
       color: #fff; border: none; font-size: 1.1rem; font-weight: 800;
-      padding: 14px 36px; border-radius: 12px; cursor: pointer; transition: all 0.25s ease;
+      padding: 14px 38px; border-radius: 12px; cursor: pointer; transition: all 0.25s ease;
       box-shadow: 0 8px 24px var(--primary-glow);
     }
     .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px var(--primary-glow); }
     .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .status-msg { margin-top: 12px; font-size: 0.92rem; font-weight: 700; }
+    .status-msg { margin-top: 14px; font-size: 0.95rem; font-weight: 700; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -212,879 +254,791 @@
   
   <header>
     <div class="badge-row">
-      <span class="badge badge-topic">B1 Grammar Masterclass</span>
-      <span class="badge badge-mastery">Reported Speech Lab</span>
-      <span class="badge badge-interactive">58 Interactive Items</span>
+      <span class="badge badge-level">B1 Intermediate</span>
+      <span class="badge badge-topic">Can, Could, Be Able To</span>
+      <span class="badge badge-interactive">30 Irregular Verbs (61-90)</span>
+      <span class="badge badge-interactive">⚡ Instant Feedback Lab</span>
     </div>
-    <h1>Reported Speech (Direct to Indirect) Mastery Lab</h1>
-    <p class="subtitle">Direct Speech (ko'chirma gap)ni Indirect Speech (o'zlashtirma gap)ga aylantirish: Zamonlar orqaga surilishi (Backshift), olmoshlar moslashuvi, payt/o'rin ravishlari, Say vs Tell va maxsus reporting verbs (admit, deny, promise, refuse, remind) bo'yicha maxsus sinov laboratoriyasi.</p>
+    <h1>Can, Could, Be Able To & 30 ta Noto'g'ri Fe'l (61–90)</h1>
+    <p class="subtitle">B1 darajadagi qobiliyat, muvaffaqiyatli uddalash (was able to), kelajak/perfect shakllari hamda 61-dan 90-gacha bo'lgan 30 ta asosiy noto'g'ri fe'llar interaktiv trenajyori.</p>
+
+    <!-- CHEAT SHEET -->
+    <div class="cheat-grid">
+      <div class="cheat-card">
+        <div class="cheat-title">⚡ 1. CAN vs BE ABLE TO (Hozirgi vaqt)</div>
+        <div class="cheat-rule">Hozirgi zamonda ikkisi ham qobiliyatni bildiradi.</div>
+        <div class="cheat-ex">• 'Can' jonli nutqda ko'proq ishlatiladi: "I can speak English."<br>• 'Be able to' rasmiyroq: "She is able to solve complex equations."</div>
+      </div>
+      <div class="cheat-card">
+        <div class="cheat-title">🏆 2. COULD vs WAS/WERE ABLE TO (O'tmish)</div>
+        <div class="cheat-rule">Eng katta farq: Umumiy qobiliyat vs Bir martalik natija!</div>
+        <div class="cheat-ex">• <b>Could:</b> O'tmishda umumiy qila olgan ishlar ("I could swim when I was 5").<br>• <b>Was/Were able to:</b> Aniq bir qiyin vaziyatda bir martalik ishni <u>uddalash</u> ("The fire spread, but he was able to escape").</div>
+      </div>
+      <div class="cheat-card">
+        <div class="cheat-title">🔮 3. KELAJAK VA PERFECT ZAMONLAR</div>
+        <div class="cheat-rule">CAN fe'lining kelajak yoki perfect shakli yo'q!</div>
+        <div class="cheat-ex">• <b>Kelajak:</b> "I will be able to speak fluent English next year." (will can ❌)<br>• <b>Present Perfect:</b> "I haven't been able to sleep lately." (haven't can ❌)</div>
+      </div>
+      <div class="cheat-card">
+        <div class="cheat-title">🚫 4. INKORDA: COULDN'T vs WASN'T ABLE TO</div>
+        <div class="cheat-rule">Inkor gapda ikkalasi ham bir martalik holatda ham ishlayveradi!</div>
+        <div class="cheat-ex">• "I looked everywhere, but I couldn't find my keys." ✅<br>• "I looked everywhere, but I wasn't able to find my keys." ✅</div>
+      </div>
+    </div>
+
+    <div class="trap-box">
+      <div class="trap-title">⚠️ O'ZBEKCHA QOPQON (Eng ko'p uchraydigan xato):</div>
+      O'zbek tilida <i>"Men imtihondan o'ta oldim"</i> va <i>"Men yoshligimda tez yugura olardim"</i> ikkalasi ham 'ola oldim/olardim'. Lekin ingliz tilida bir martalik qiyin vaziyatda maqsadga erishganda <b>COULD deb bo'lmaydi!</b> Masalan: <i>"The exam was hard, but I could pass it"</i> ❌ (XATO!) ➡️ <i>"The exam was hard, but I was able to pass it"</i> ✅ (TO'G'RI!).
+    </div>
   </header>
 
-  <!-- STUDENT INFO -->
+  <!-- STUDENT CARD -->
   <div class="student-card">
     <div class="student-inputs">
       <div class="input-group">
-        <label>Ism va Familiya</label>
-        <input type="text" id="studentName" placeholder="Masalan: Azizbek Karimov" oninput="saveDraft()">
+        <label>O'quvchi Ism va Familiyasi *</label>
+        <input type="text" id="studentName" placeholder="Masalan: Malika Karimova" oninput="saveDraft()">
       </div>
       <div class="input-group">
-        <label>Telegram Username</label>
+        <label>Telegram Username (ixtiyoriy)</label>
         <input type="text" id="studentTelegram" placeholder="@username" oninput="saveDraft()">
       </div>
     </div>
   </div>
 
-  <!-- STICKY REALTIME SCORE & PROGRESS BAR -->
+  <!-- STICKY REALTIME SCORE BAR -->
   <div class="sticky-score-bar">
     <div class="score-left">
-      <div class="score-badge" id="liveScoreBadge">0 / 50</div>
+      <span class="score-badge" id="liveScoreBadge">0 / 0</span>
       <div>
-        <div class="progress-info" id="progressInfoText">Javob berildi: 0 / 50</div>
-        <div class="progress-bar-wrap">
-          <div class="progress-bar-fill" id="progressBarFill"></div>
-        </div>
+        <div class="progress-info" id="progressInfoText">Javob berildi: 0 / 0 (0%)</div>
+        <div style="font-size:0.75rem; color:#94a3b8;">Har bir savol tanlanganda natija darhol ko'rsatiladi</div>
       </div>
     </div>
-    <div>
-      <span style="font-size:0.8rem; color:#94a3b8;">Draft avtomatik saqlanmoqda</span>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressBarFill"></div>
     </div>
   </div>
 
-  <!-- SECTION 1: VOCABULARY & AUDIO -->
+  <!-- SECTION 1: 30 IRREGULAR VERBS TABLE (61-90) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>🔊 1-Qism: Reporting Verbs & Vaqt/O'rin O'zgarishlari (12 ta Kalit So'z)</span>
+    <div class="sec-title">📚 1-BO'LIM: 30 ta Noto'g'ri Fe'llar Ro'yxati (61–90)</div>
+    <div class="sec-desc">Siz allaqachon dastlabki 60 ta fe'lni to'liq o'zlashtirgansiz! Endi 61-dan 90-gacha bo'lgan 30 ta yangi fe'lni talaffuzi va 3 ta shakli bilan yod oling. Fe'l yonidagi 🔊 tugmasini bosib to'g'ri talaffuzni eshiting.</div>
+
+    <div class="verb-search-wrap">
+      <input type="text" id="verbSearchInput" class="verb-search-input" placeholder="🔍 Fe'lni qidirish (ring, see, run...)" oninput="filterVerbs()">
     </div>
-    <div class="sec-desc">Tugmachani bosib so'zlarning to'g'ri talaffuzini eshiting va ularning o'zlashtirma gapdagi qoidasiga e'tibor bering.</div>
-    <div class="vocab-grid" id="vocabGrid"></div>
+
+    <div class="verb-table-wrap">
+      <table class="verb-table" id="verbsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>V1 (Infinitive)</th>
+            <th>V2 (Past Simple)</th>
+            <th>V3 (Past Participle)</th>
+            <th>O'zbekcha Ma'nosi</th>
+            <th>Ovoz</th>
+          </tr>
+        </thead>
+        <tbody id="verbsTbody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
   </div>
 
-  <!-- SECTION 2: SAY vs TELL & REPORTING VERBS DECISION LAB -->
+  <!-- SECTION 2: IRREGULAR VERBS INSTANT QUIZ (15 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>⚡ 2-Qism: Say vs Tell & Reporting Verbs Decision Lab (15 ta Savol)</span>
-    </div>
-    <div class="sec-desc"><b>Asosiy qoida:</b> <code>say (that)</code> = kimgaligi aytilmaydi (<i>He said that...</i>). <code>tell + someone (that)</code> = kimgaligi shart (<i>He told me that...</i>). Maxsus fe'llar: <code>remind s.o to V1</code>, <code>refuse to V1</code>, <code>promise to V1 / that</code>, <code>admit/deny + V-ing</code>.</div>
-    
-    <div class="rule-banner">
-      💡 <b>O'zbekcha qopqon:</b> O'zbek tilida "U aytdi" deb kimgaligini aytmasak ham bo'ladi, lekin ingliz tilida "He told that..." ❌ bo'lmaydi! Har doim "He told ME that..." yoki "He said that..." ✅ bo'lishi shart!
-    </div>
-
-    <div id="sayTellContainer"></div>
+    <div class="sec-title">⚡ 2-BO'LIM: 30 Noto'g'ri Fe'l Bo'yicha Ekspress Test (15 ta)</div>
+    <div class="sec-desc">Har bir savolda to'g'ri variantni bosing. Natija (to'g'ri yoki noto'g'ri) va sababi darhol ko'rsatiladi!</div>
+    <div id="verbsQuizContainer"></div>
   </div>
 
-  <!-- SECTION 3: REPORTED SPEECH TRANSFORMATIONS -->
+  <!-- SECTION 3: CAN, COULD, BE ABLE TO CORE GRAMMAR (16 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>🔄 3-Qism: Direct Speech dan Reported Speech ga O'girish (15 ta Savol)</span>
-    </div>
-    <div class="sec-desc">Ko'chirma gaplarni o'zlashtirma gapga aylantiring. Zamonlar orqaga surilishi (Backshift), olmoshlar va vaqt so'zlari o'zgarishiga qat'iy rioya qiling.</div>
-
-    <table class="backshift-table">
-      <thead>
-        <tr>
-          <th>Direct Speech (Ko'chirma gap)</th>
-          <th>Reported Speech (Orqaga surilish)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Present Simple (<code>work</code>)</td><td>Past Simple (<code>worked</code>)</td></tr>
-        <tr><td>Present Continuous (<code>am/is/are working</code>)</td><td>Past Continuous (<code>was/were working</code>)</td></tr>
-        <tr><td>Past Simple / Present Perfect (<code>worked / have worked</code>)</td><td>Past Perfect (<code>had worked</code>)</td></tr>
-        <tr><td>will / can / must</td><td>would / could / had to</td></tr>
-        <tr><td>yesterday / tomorrow / today</td><td>the day before / the following day / that day</td></tr>
-      </tbody>
-    </table>
-
-    <div id="transformContainer"></div>
+    <div class="sec-title">🎯 3-BO'LIM: Can, Could, Be Able To — Situatsion Test (16 ta)</div>
+    <div class="sec-desc">B1 darajadagi o'ziga xos farqlar: bir martalik muvaffaqiyat (was able to), kelajak (will be able to), perfect shakllar va inkorlar. Variantni tanlang va tushuntirishni darhol o'qing!</div>
+    <div id="grammarQuizContainer"></div>
   </div>
 
-  <!-- SECTION 4: ERROR DETECTION -->
+  <!-- SECTION 4: MISTAKE HUNTER (6 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>🔍 4-Qism: O'zlashtirma Gap Qopqonlarini Tuzatish (10 ta Xato Hunt)</span>
-    </div>
-    <div class="sec-desc">Ushbu gaplarda B1 darajadagi o'quvchilar ko'p yo'l qo'yadigan jiddiy grammatik xatolar mavjud (inversiya, say/tell, vaqt so'zi yoki backshift xatosi). Gapni to'liq to'g'rilab yozing.</div>
-    <div id="errorHuntContainer"></div>
+    <div class="sec-title">🕵️ 4-BO'LIM: Xato Ovchisi (Mistake Hunter - 6 ta)</div>
+    <div class="sec-desc">Har bir gapda modal fe'llar bilan bog'liq 1 ta jiddiy xato bor. Xato bo'lgan so'zni bosing, to'g'rilangan shakli va qoidasini darhol ko'rasiz!</div>
+    <div id="hunterContainer"></div>
   </div>
 
-  <!-- SECTION 5: REPORTED SPEECH MCQ MASTERY -->
+  <!-- SECTION 5: SENTENCE BUILDER / SCRAMBLE (6 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>🎯 5-Qism: Reported Speech Integratsiyalashgan Test (10 ta Test)</span>
-    </div>
-    <div class="sec-desc">Savol gaplar (if/whether, wh-), buyruq/iltimoslar (told me to, asked me not to) va reporting verbs qoidalarini mustahkamlovchi 4-variantli test.</div>
-    <div id="mcqContainer"></div>
+    <div class="sec-title">🧩 5-BO'LIM: Gap Tuzuvchi (Sentence Builder - 6 ta)</div>
+    <div class="sec-desc">So'zlarni to'g'ri ketma-ketlikda bosing va "Tekshirish" tugmasini bosing.</div>
+    <div id="scrambleContainer"></div>
   </div>
 
-  <!-- SECTION 6: CONTEXTUAL TRANSLATION -->
+  <!-- SECTION 6: TRANSLATION CHALLENGE (6 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>✍️ 6-Qism: Kontekstual Tarjima (8 ta Gap)</span>
-    </div>
-    <div class="sec-desc">O'zbek tilidagi fikrlarni ingliz tilidagi o'zlashtirma gap qoidalari asosida professional tarjima qiling.</div>
+    <div class="sec-title">✍️ 6-BO'LIM: O'zbekchadan Inglizchaga Tarjima (6 ta)</div>
+    <div class="sec-desc">Gapni inglizchaga tarjima qilib yozing va "Tekshirish" tugmasini bosib namunaviy to'g'ri javobni ko'ring.</div>
     <div id="transContainer"></div>
   </div>
 
-  <!-- SECTION 7: NARRATIVE ESSAY -->
+  <!-- SECTION 7: PERSONAL PRODUCTION (3 QUESTIONS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>📝 7-Qism: Suhbatni Hikoya Qilib Yozish (Mini-Insho)</span>
+    <div class="sec-title">🌟 7-BO'LIM: Shaxsiy Tajriba Inshosi (3 ta savol)</div>
+    <div class="sec-desc">Quyidagi savollarga o'z hayotingizdan kelib chiqib 2-3 tadan to'liq inglizcha gap bilan javob yozing:</div>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div>
+        <label style="font-weight:700; color:#c4b5fd; display:block; margin-bottom:6px;">1. Yoshligingizda nimalarni qila olardingiz? (Use 'could' for general abilities in childhood):</label>
+        <textarea id="prod1" rows="2" placeholder="Masalan: When I was 10, I could ride a bicycle and I could swim very fast..." oninput="saveDraft()"></textarea>
+      </div>
+      <div>
+        <label style="font-weight:700; color:#c4b5fd; display:block; margin-bottom:6px;">2. Yaqinda qanday qiyin ishni uddasidan chiqdingiz? (Use 'was able to' or 'managed to' for a specific achievement):</label>
+        <textarea id="prod2" rows="2" placeholder="Masalan: The exam was very challenging yesterday, but I was able to finish it on time..." oninput="saveDraft()"></textarea>
+      </div>
+      <div>
+        <label style="font-weight:700; color:#c4b5fd; display:block; margin-bottom:6px;">3. Ingliz tilini B2 darajaga chiqarganingizdan keyin nimalarni qila olasiz? (Use 'will be able to' for future):</label>
+        <textarea id="prod3" rows="2" placeholder="Masalan: When I reach B2 level, I will be able to communicate with native speakers fluently..." oninput="saveDraft()"></textarea>
+      </div>
     </div>
-    <div class="essay-prompt">
-      <h4>Topshiriq: Kechagi suhbatni qayta hikoya qilib bering (8-10 gap)</h4>
-      <p>Yaqinda do'stingiz, shifokor yoki ustozingiz bilan bo'lib o'tgan qiziqarli suhbatni eslang. Ushbu suhbatni to'liq Reported Speech orqali hikoya qiling.</p>
-      <p style="color:#c4b5fd; font-weight:700;">Talablar: Kamida 4 xil reporting verbs (<i>said that, told me that, asked if/whether, promised to/that, explained that, refused to</i>) va vaqt ko'rsatkichlari (<i>the previous day, the next day, that day</i>) ishlatilsin.</p>
-    </div>
-    <textarea id="essayNarrative" rows="7" placeholder="Yesterday, I met my friend Jasur. He told me that he had just returned from Samarkand. I asked him whether he had enjoyed the trip. He explained that..." oninput="saveDraft()"></textarea>
   </div>
 
   <!-- SUBMIT CARD -->
   <div class="submit-card">
-    <h3 style="font-size:1.4rem; font-weight:900; margin-bottom:8px; color:#fff;">Laboratoriya Hisobotini Ustozga Jo'natish</h3>
-    <p style="color:#cbd5e1; font-size:0.92rem; margin-bottom:20px; max-width:600px; margin-left:auto; margin-right:auto;">Barcha javoblaringiz, 15 ta transformatsiyangiz, xato tuzatishlaringiz va hikoyangiz to'g'ridan-to'g'ri ustozingizning Telegram botiga to'liq tahlil bilan yuboriladi.</p>
     <button class="submit-btn" id="submitBtn" onclick="submitToTelegram()">🚀 Vazifani Topshirish</button>
-    <div class="status-msg" id="statusMsg"></div>
+    <div class="status-msg" id="statusMsg">Barcha savollarga javob berib, natijangizni ustozga yuboring!</div>
   </div>
 
 </div>
 
 <script>
-  // TELEGRAM CONFIGURATION
-  const BOT_TOKEN = '8787909516:AAFpho1G-GYg1UW87lTIEjR1Ir0z6QjmN78';
+  const BOT_TOKEN = '8664328884:AAGQcZk5Y3wRQVrICE-W06b60_zFemdNgIs';
+  const BOT_TOKEN_BACKUP = '8787909516:AAFpho1G-GYg1UW87lTIEjR1Ir0z6QjmN78';
   const TEACHER_IDS = ['6315515792', '7957347033'];
-  const STORAGE_KEY = 'teacheros_hw_b1_reported_speech_lab';
+  const STORAGE_KEY = 'ulunur_b1_can_could_v3';
 
-  // 12 VOCABULARY & REPORTING VERBS (WITH AUDIO)
-  const VOCAB_DATA = [
-    { word: "say (that)", uz: "demoq (tinglovchisiz: He said that...)", ex: "He said that he was ready." },
-    { word: "tell someone (that)", uz: "kimgadir aytmoq (tinglovchi bilan: He told me that...)", ex: "She told me that she loved reading." },
-    { word: "admit (that / V-ing)", uz: "tan olmoq", ex: "He admitted making a serious mistake." },
-    { word: "deny (V-ing)", uz: "inkor etmoq, rad qilmoq", ex: "The suspect denied stealing the money." },
-    { word: "promise (to do / that)", uz: "va'da bermoq", ex: "She promised to return the car tomorrow." },
-    { word: "refuse (to do)", uz: "rad qilmoq (taklif/buyruqni)", ex: "He refused to answer personal questions." },
-    { word: "remind someone (to do)", uz: "eslatmoq", ex: "My mother reminded me to lock the door." },
-    { word: "the previous day", uz: "o'tgan kuni (yesterday o'rniga)", ex: "He said he had arrived the previous day." },
-    { word: "the following day", uz: "ertasi kuni (tomorrow o'rniga)", ex: "She promised to call the following day." },
-    { word: "that day", uz: "o'sha kuni (today o'rniga)", ex: "He explained that he was busy that day." },
-    { word: "then / at that time", uz: "o'sha paytda (now o'rniga)", ex: "She said she was working then." },
-    { word: "there", uz: "u yerda (here o'rniga)", ex: "He said he had lived there for ten years." }
+  const VERBS = [{"v1":"ring","v2":"rang","v3":"rung","uz":"qo'ng'iroq qilmoq"},{"v1":"rise","v2":"rose","v3":"risen","uz":"ko'tarilmoq, chiqmoq"},{"v1":"run","v2":"ran","v3":"run","uz":"yugurmoq"},{"v1":"say","v2":"said","v3":"said","uz":"aytmoq"},{"v1":"see","v2":"saw","v3":"seen","uz":"ko'rmoq"},{"v1":"seek","v2":"sought","v3":"sought","uz":"qidirmoq, izlamoq"},{"v1":"sell","v2":"sold","v3":"sold","uz":"sotmoq"},{"v1":"send","v2":"sent","v3":"sent","uz":"yubormoq, jo'natmoq"},{"v1":"set","v2":"set","v3":"set","uz":"o'rnatmoq, botmoq (quyosh)"},{"v1":"shake","v2":"shook","v3":"shaken","uz":"silkitmoq, qaltiramoq"},{"v1":"shine","v2":"shone","v3":"shone","uz":"porlamoq, nur sochmoq"},{"v1":"shoot","v2":"shot","v3":"shot","uz":"otmoq, o'q uzmoq"},{"v1":"show","v2":"showed","v3":"shown","uz":"ko'rsatmoq"},{"v1":"shut","v2":"shut","v3":"shut","uz":"yopmoq"},{"v1":"sing","v2":"sang","v3":"sung","uz":"kuylamoq"},{"v1":"sink","v2":"sank","v3":"sunk","uz":"cho'kmoq"},{"v1":"sit","v2":"sat","v3":"sat","uz":"o'tirmoq"},{"v1":"sleep","v2":"slept","v3":"slept","uz":"uxlamoq"},{"v1":"slide","v2":"slid","v3":"slid","uz":"sirg'anmoq"},{"v1":"speak","v2":"spoke","v3":"spoken","uz":"gapirmoq"},{"v1":"spend","v2":"spent","v3":"spent","uz":"sarflamoq, vaqt o'tkazmoq"},{"v1":"spread","v2":"spread","v3":"spread","uz":"tarqatmoq, surtmoq"},{"v1":"stand","v2":"stood","v3":"stood","uz":"turmoq, tik turmoq"},{"v1":"steal","v2":"stole","v3":"stolen","uz":"o'g'irlamoq"},{"v1":"stick","v2":"stuck","v3":"stuck","uz":"yopishmoq, tiqilib qolmoq"},{"v1":"strike","v2":"struck","v3":"struck","uz":"zarba bermoq, urmoq"},{"v1":"swim","v2":"swam","v3":"swum","uz":"suzmoq"},{"v1":"take","v2":"took","v3":"taken","uz":"olmoq"},{"v1":"teach","v2":"taught","v3":"taught","uz":"o'rgatmoq, dars bermoq"},{"v1":"tear","v2":"tore","v3":"torn","uz":"yirtmoq"}];
+
+  // 15 VERBS QUIZ ITEMS
+  const VERB_QUIZ_ITEMS = [
+    { id: 'vq1', q: "Fe'lning V2 (Past Simple) shakli qaysi: <code>rise</code> (ko'tarilmoq)?", opts: ["rose", "risen", "rised", "roast"], ans: "rose", expl: "rise ➔ rose (V2) ➔ risen (V3)." },
+    { id: 'vq2', q: "Fe'lning V3 (Past Participle) shakli qaysi: <code>run</code> (yugurmoq)?", opts: ["run", "ran", "running", "runned"], ans: "run", expl: "run ➔ ran (V2) ➔ run (V3). V1 va V3 bir xil!" },
+    { id: 'vq3', q: "Fe'lning V2 va V3 shakllari qaysi: <code>seek</code> (qidirmoq, izlamoq)?", opts: ["sought / sought", "seeked / seeked", "soughted / soughted", "sank / sunk"], ans: "sought / sought", expl: "seek ➔ sought ➔ sought." },
+    { id: 'vq4', q: "Fe'lning V2 (Past Simple) shakli qaysi: <code>shake</code> (silkitmoq)?", opts: ["shook", "shaken", "shaked", "shakenly"], ans: "shook", expl: "shake ➔ shook (V2) ➔ shaken (V3)." },
+    { id: 'vq5', q: "Fe'lning V3 (Past Participle) shakli qaysi: <code>show</code> (ko'rsatmoq)?", opts: ["shown", "showed", "shaw", "showen"], ans: "shown", expl: "show ➔ showed (V2) ➔ shown (V3)." },
+    { id: 'vq6', q: "Fe'lning V2 (Past Simple) shakli qaysi: <code>sing</code> (kuylamoq)?", opts: ["sang", "sung", "song", "singed"], ans: "sang", expl: "sing ➔ sang (V2) ➔ sung (V3)." },
+    { id: 'vq7', q: "Fe'lning V3 (Past Participle) shakli qaysi: <code>sink</code> (cho'kmoq)?", opts: ["sunk", "sank", "sunken", "sinked"], ans: "sunk", expl: "sink ➔ sank (V2) ➔ sunk (V3)." },
+    { id: 'vq8', q: "Fe'lning V2 va V3 shakli qaysi: <code>sleep</code> (uxlamoq)?", opts: ["slept / slept", "sleeped / sleeped", "slapt / slapt", "slep / slep"], ans: "slept / slept", expl: "sleep ➔ slept ➔ slept." },
+    { id: 'vq9', q: "Fe'lning V2 shakli qaysi: <code>slide</code> (sirg'anmoq)?", opts: ["slid", "slided", "slode", "slidden"], ans: "slid", expl: "slide ➔ slid (V2) ➔ slid (V3)." },
+    { id: 'vq10', q: "Fe'lning V3 shakli qaysi: <code>speak</code> (gapirmoq)?", opts: ["spoken", "spoke", "speaked", "spoking"], ans: "spoken", expl: "speak ➔ spoke (V2) ➔ spoken (V3)." },
+    { id: 'vq11', q: "Fe'lning V2 va V3 shakli qaysi: <code>spend</code> (sarflamoq)?", opts: ["spent / spent", "spended / spended", "spant / spant", "spent / spended"], ans: "spent / spent", expl: "spend ➔ spent ➔ spent (d ➔ t ga aylanadi)." },
+    { id: 'vq12', q: "Fe'lning V3 shakli qaysi: <code>steal</code> (o'g'irlamoq)?", opts: ["stolen", "stole", "stealed", "stollen"], ans: "stolen", expl: "steal ➔ stole (V2) ➔ stolen (V3)." },
+    { id: 'vq13', q: "Fe'lning V2 va V3 shakli qaysi: <code>stick</code> (yopishmoq, tiqilmoq)?", opts: ["stuck / stuck", "sticked / sticked", "stacked / stacked", "stock / stuck"], ans: "stuck / stuck", expl: "stick ➔ stuck ➔ stuck." },
+    { id: 'vq14', q: "Fe'lning V2 (Past Simple) shakli qaysi: <code>strike</code> (zarba bermoq, urmoq)?", opts: ["struck", "strook", "striked", "stricken"], ans: "struck", expl: "strike ➔ struck (V2) ➔ struck (V3)." },
+    { id: 'vq15', q: "Fe'lning V3 (Past Participle) shakli qaysi: <code>tear</code> (yirtmoq)?", opts: ["torn", "tore", "teared", "tair"], ans: "torn", expl: "tear ➔ tore (V2) ➔ torn (V3)." }
   ];
 
-  // 15 SAY VS TELL & REPORTING VERBS ITEMS
-  const SAY_TELL_ITEMS = [
+  // 16 GRAMMAR QUIZ ITEMS
+  const GRAMMAR_QUIZ_ITEMS = [
     {
-      id: 1,
-      prompt: "He ______ that he was too exhausted to drive home.",
-      opts: ["said", "told"],
-      ans: "said",
-      expl: "Tinglovchi (me/us/him) yo'q. 'said that' to'g'ri shakl."
+      id: 'gq1',
+      q: "The fire spread through the hotel quickly, but everyone ______ escape.",
+      opts: ["was able to", "could", "can", "is able to"],
+      ans: "was able to",
+      expl: "O'tmishda bitta aniq xavfli vaziyatda muvaffaqiyatli qutulib qolish (bir martalik yutuq) uchun 'could' ishlatilmaydi, 'was able to' ishlatiladi!"
     },
     {
-      id: 2,
-      prompt: "She ______ me that she had already booked the flight tickets.",
-      opts: ["told", "said"],
-      ans: "told",
-      expl: "Tinglovchi 'me' mavjud: 'told me that' to'g'ri."
-    },
-    {
-      id: 3,
-      prompt: "My boss ______ to give our team a bonus if we hit the deadline.",
-      opts: ["promised", "told"],
-      ans: "promised",
-      expl: "Kelajakdagi narsani bajarishga va'da berish: 'promised to give'."
-    },
-    {
-      id: 4,
-      prompt: "The cashier ______ stealing any money from the register.",
-      opts: ["denied", "refused"],
-      ans: "denied",
-      expl: "Qilingan ishni inkor qilish: 'denied + V-ing' (denied stealing)."
-    },
-    {
-      id: 5,
-      prompt: "Sarah ______ me to take an umbrella because it was pouring outside.",
-      opts: ["reminded", "said"],
-      ans: "reminded",
-      expl: "Kimgadir biror ishni eslatish: 'reminded me to take'."
-    },
-    {
-      id: 6,
-      prompt: "The professor ______ that the exam date had been changed.",
-      opts: ["explained", "told"],
-      ans: "explained",
-      expl: "Sabab/holatni tushuntirishda tinglovchisiz 'explained that' ishlatiladi."
-    },
-    {
-      id: 7,
-      prompt: "The driver ______ to sign the traffic violation paper.",
-      opts: ["refused", "denied"],
-      ans: "refused",
-      expl: "Biror narsani qilishdan bosh tortish: 'refused to sign'."
-    },
-    {
-      id: 8,
-      prompt: "Ali ______ breaking his sister's smartphone by accident.",
-      opts: ["admitted", "promised"],
-      ans: "admitted",
-      expl: "Xatoni yoki aybni tan olish: 'admitted + V-ing' (admitted breaking)."
-    },
-    {
-      id: 9,
-      prompt: "She ______ whether I had ever visited London before.",
-      opts: ["asked", "said"],
-      ans: "asked",
-      expl: "So'roq gaplarda 'if/whether' bilan 'asked' keladi."
-    },
-    {
-      id: 10,
-      prompt: "The tourist ______ us where the nearest metro station was.",
-      opts: ["asked", "said"],
-      ans: "asked",
-      expl: "Ma'lumot so'rash: 'asked us where...'."
-    },
-    {
-      id: 11,
-      prompt: "Please don't ______ me what I should or shouldn't do!",
-      opts: ["tell", "say"],
-      ans: "tell",
-      expl: "Tinglovchi 'me' bor: 'tell me'."
-    },
-    {
-      id: 12,
-      prompt: "She ______ goodbye and walked out into the rain.",
-      opts: ["said", "told"],
-      ans: "said",
-      expl: "Xayrlashish/salomlashish iboralarida 'say goodbye', 'say hello' ishlatiladi."
-    },
-    {
-      id: 13,
-      prompt: "The librarian ______ us not to speak loudly in the study room.",
-      opts: ["told", "said"],
-      ans: "told",
-      expl: "Buyruq/taqiq: 'told us not to speak'."
-    },
-    {
-      id: 14,
-      prompt: "He ______ sorry for arriving 20 minutes late to the meeting.",
-      opts: ["said", "told"],
-      ans: "said",
-      expl: "'say sorry' — kechirim so'rash iborasi."
-    },
-    {
-      id: 15,
-      prompt: "My grandfather ______ me a fascinating story about his youth.",
-      opts: ["told", "said"],
-      ans: "told",
-      expl: "Hikoya yoki ertak aytib berish: 'tell someone a story'."
-    }
-  ];
-
-  // 15 DIRECT TO REPORTED TRANSFORMATIONS
-  const TRANSFORM_ITEMS = [
-    {
-      id: 1,
-      direct: "John: 'I work for an international IT company.'",
-      lead: "John said that...",
-      hint: "work -> worked (Present Simple -> Past Simple)",
-      accepted: [
-        "he worked for an international it company"
-      ]
-    },
-    {
-      id: 2,
-      direct: "Mary: 'I am preparing dinner right now.'",
-      lead: "Mary said that...",
-      hint: "am preparing -> was preparing, right now -> right then / then",
-      accepted: [
-        "she was preparing dinner right then",
-        "she was preparing dinner then",
-        "she was preparing dinner at that time"
-      ]
-    },
-    {
-      id: 3,
-      direct: "David: 'I bought a new laptop yesterday.'",
-      lead: "David told me that...",
-      hint: "bought -> had bought, yesterday -> the previous day / the day before",
-      accepted: [
-        "he had bought a new laptop the day before",
-        "he had bought a new laptop the previous day"
-      ]
-    },
-    {
-      id: 4,
-      direct: "Emma: 'I have already finished my bachelor thesis.'",
-      lead: "Emma said that...",
-      hint: "have finished -> had finished (Present Perfect -> Past Perfect)",
-      accepted: [
-        "she had already finished her bachelor thesis"
-      ]
-    },
-    {
-      id: 5,
-      direct: "Alex: 'I will call you tomorrow evening.'",
-      lead: "Alex promised that...",
-      hint: "will call -> would call, you -> me, tomorrow evening -> the following evening / the next evening",
-      accepted: [
-        "he would call me the following evening",
-        "he would call me the next evening"
-      ]
-    },
-    {
-      id: 6,
-      direct: "Sarah: 'I can speak three foreign languages fluently.'",
-      lead: "Sarah said that...",
-      hint: "can speak -> could speak",
-      accepted: [
-        "she could speak three foreign languages fluently"
-      ]
-    },
-    {
-      id: 7,
-      direct: "Doctor: 'You must take this antibiotic twice a day.'",
-      lead: "The doctor told me that...",
-      hint: "must -> had to, this -> that",
-      accepted: [
-        "i had to take that antibiotic twice a day"
-      ]
-    },
-    {
-      id: 8,
-      direct: "Policeman: 'Where are you going at this late hour?'",
-      lead: "The policeman asked me...",
-      hint: "Wh-savolda inversiya yo'qoladi: where I was going at that late hour",
-      accepted: [
-        "where i was going at that late hour"
-      ]
-    },
-    {
-      id: 9,
-      direct: "Teacher: 'Do you understand the formula?'",
-      lead: "The teacher asked us...",
-      hint: "Yes/No savol: if / whether + we understood the formula",
-      accepted: [
-        "if we understood the formula",
-        "whether we understood the formula"
-      ]
-    },
-    {
-      id: 10,
-      direct: "Tom: 'What time does the last flight depart?'",
-      lead: "Tom asked...",
-      hint: "does depart -> departed, no 'does' in reported question",
-      accepted: [
-        "what time the last flight departed"
-      ]
-    },
-    {
-      id: 11,
-      direct: "Mother: 'Please don't touch the hot stove!'",
-      lead: "Mother told me...",
-      hint: "Taqiq: not to touch the hot stove",
-      accepted: [
-        "not to touch the hot stove"
-      ]
-    },
-    {
-      id: 12,
-      direct: "Boss: 'Send the final contract today before 5 PM.'",
-      lead: "The boss told me...",
-      hint: "Buyruq: to send... today -> that day",
-      accepted: [
-        "to send the final contract that day before 5 pm"
-      ]
-    },
-    {
-      id: 13,
-      direct: "Kate: 'We were having lunch when the power went out.'",
-      lead: "Kate explained that...",
-      hint: "were having -> had been having",
-      accepted: [
-        "they had been having lunch when the power went out",
-        "they had been having lunch when the power had gone out"
-      ]
-    },
-    {
-      id: 14,
-      direct: "Mike: 'I am going to start my own business next year.'",
-      lead: "Mike said that...",
-      hint: "am going to -> was going to, next year -> the following year / the next year",
-      accepted: [
-        "he was going to start his own business the following year",
-        "he was going to start his own business the next year"
-      ]
-    },
-    {
-      id: 15,
-      direct: "Lucy: 'Have you ever seen this movie before?'",
-      lead: "Lucy asked me...",
-      hint: "if / whether + I had ever seen that movie before",
-      accepted: [
-        "if i had ever seen that movie before",
-        "whether i had ever seen that movie before"
-      ]
-    }
-  ];
-
-  // 10 REPORTED SPEECH ERROR HUNT ITEMS
-  const ERROR_ITEMS = [
-    {
-      id: 1,
-      bad: "He told that he will call me tomorrow.",
-      hint: "told us yoki said that; will -> would; tomorrow -> the next day / the following day.",
-      correctVariants: [
-        "he said that he would call me the next day",
-        "he said that he would call me the following day",
-        "he told me that he would call me the next day",
-        "he told me that he would call me the following day"
-      ]
-    },
-    {
-      id: 2,
-      bad: "She asked me where did I live.",
-      hint: "Savol so'z tartibi o'zlashtirma gapda to'g'ri darak tartibiga o'tadi (did I live emas, I lived).",
-      correctVariants: [
-        "she asked me where i lived"
-      ]
-    },
-    {
-      id: 3,
-      bad: "The teacher asked whether was I ready for the test.",
-      hint: "whether dan keyin ega + fe'l keladi: whether I was ready (was I emas).",
-      correctVariants: [
-        "the teacher asked whether i was ready for the test",
-        "the teacher asked if i was ready for the test"
-      ]
-    },
-    {
-      id: 4,
-      bad: "He said me that he was tired.",
-      hint: "said me bo'lmaydi! said to me yoki told me bo'lishi kerak.",
-      correctVariants: [
-        "he told me that he was tired",
-        "he said that he was tired"
-      ]
-    },
-    {
-      id: 5,
-      bad: "She asked what time was the train leaving.",
-      hint: "To'g'ri tartib: what time the train was leaving.",
-      correctVariants: [
-        "she asked what time the train was leaving"
-      ]
-    },
-    {
-      id: 6,
-      bad: "Mother told to me to clean my bedroom.",
-      hint: "'tell' fe'lidan keyin 'to' qo'yilmaydi: told me.",
-      correctVariants: [
-        "mother told me to clean my bedroom"
-      ]
-    },
-    {
-      id: 7,
-      bad: "He said he has lived here for five years.",
-      hint: "has lived -> had lived; here -> there.",
-      correctVariants: [
-        "he said he had lived there for five years",
-        "he said that he had lived there for five years"
-      ]
-    },
-    {
-      id: 8,
-      bad: "She asked me if could I lend her my dictionary.",
-      hint: "Darak tartib: if I could lend (if could I emas).",
-      correctVariants: [
-        "she asked me if i could lend her my dictionary",
-        "she asked me whether i could lend her my dictionary"
-      ]
-    },
-    {
-      id: 9,
-      bad: "The manager promised that he will solve the issue yesterday.",
-      hint: "will -> would; yesterday -> the day before / the previous day.",
-      correctVariants: [
-        "the manager promised that he would solve the issue the day before",
-        "the manager promised that he would solve the issue the previous day"
-      ]
-    },
-    {
-      id: 10,
-      bad: "He denied to steal the diamond necklace.",
-      hint: "deny dan keyin V-ing keladi: denied stealing.",
-      correctVariants: [
-        "he denied stealing the diamond necklace"
-      ]
-    }
-  ];
-
-  // 10 REPORTED SPEECH MCQS
-  const MCQ_ITEMS = [
-    {
-      id: 1,
-      q: "Sarah: 'I don't like spicy food.' -> Sarah said that she ______ spicy food.",
-      opts: ["doesn't like", "didn't like", "hadn't liked", "wouldn't like"],
-      ans: "didn't like",
-      expl: "Present Simple (don't like) -> Past Simple (didn't like) ga suriladi."
-    },
-    {
-      id: 2,
-      q: "'Where are you working now?' -> He asked me where ______ then.",
-      opts: ["was I working", "I was working", "am I working", "I am working"],
-      ans: "I was working",
-      expl: "O'zlashtirma savollarda darak gap tartibi (ega + fe'l) qo'llanadi: 'where I was working'."
-    },
-    {
-      id: 3,
-      q: "'Have you seen my car keys?' -> She asked me ______ her car keys.",
-      opts: ["if I had seen", "did I see", "if I saw", "had I seen"],
-      ans: "if I had seen",
-      expl: "Yes/No savollarda 'if' yoki 'whether' qo'yiladi va Present Perfect -> Past Perfect ga o'tadi."
-    },
-    {
-      id: 4,
-      q: "'Be quiet!' -> The teacher ______ us to be quiet.",
-      opts: ["said", "told", "suggested", "explained"],
-      ans: "told",
-      expl: "Buyruq gaplarda: 'told someone to do something' ishlatiladi."
-    },
-    {
-      id: 5,
-      q: "'I will definitely attend the meeting.' -> He ______ to attend the meeting.",
-      opts: ["promised", "denied", "refused", "warned"],
-      ans: "promised",
-      expl: "Qat'iy va'da berish: 'promised to attend'."
-    },
-    {
-      id: 6,
-      q: "'I didn't take your jacket!' -> He ______ taking my jacket.",
-      opts: ["denied", "refused", "admitted", "promised"],
-      ans: "denied",
-      expl: "Qilinmagan ishni inkor etish: 'denied + V-ing'."
-    },
-    {
-      id: 7,
-      q: "'Don't forget to submit your report today.' -> She reminded me ______ my report that day.",
-      opts: ["to submit", "submitting", "submit", "that I submit"],
-      ans: "to submit",
-      expl: "'remind someone to do something' formulasi."
-    },
-    {
-      id: 8,
-      q: "He asked me what time ______ .",
-      opts: ["the lesson started", "did the lesson start", "started the lesson", "does the lesson start"],
-      ans: "the lesson started",
-      expl: "Inversiyasiz to'g'ri darak tartibi: ega (the lesson) + fe'l (started)."
-    },
-    {
-      id: 9,
-      q: "'I can help you tomorrow.' -> He said that he ______ help me the following day.",
-      opts: ["could", "can", "will", "would have"],
+      id: 'gq2',
+      q: "When Mozart was five years old, he ______ already play the piano brilliantly.",
+      opts: ["could", "was able", "can", "will be able to"],
       ans: "could",
-      expl: "can -> could ga aylanadi."
+      expl: "O'tmishdagi umumiy qobiliyat (general past ability) uchun 'could' eng tabiiy va to'g'ri tanlovdir."
     },
     {
-      id: 10,
-      q: "'No, I won't wash the dishes!' -> The teenager ______ to wash the dishes.",
-      opts: ["refused", "denied", "promised", "reminded"],
-      ans: "refused",
-      expl: "Biror ishni qilishdan bosh tortish: 'refused to do'."
+      id: 'gq3',
+      q: "I've been studying hard every day. Next year I ______ speak English fluently.",
+      opts: ["will be able to", "will can", "can", "could"],
+      ans: "will be able to",
+      expl: "'Can' fe'lining kelajak shakli yo'q. Kelasi zamonda qobiliyat faqat 'will be able to' bilan ifodalanadi!"
+    },
+    {
+      id: 'gq4',
+      q: "I've had a terrible headache all week, so I haven't ______ sleep well.",
+      opts: ["been able to", "could", "can", "able to"],
+      ans: "been able to",
+      expl: "Present Perfect zamonida (haven't ...) fe'lning V3 shakli kerak. Modal 'can' yoki 'could' V3 ololmaydi, faqat 'been able to' ishlatiladi."
+    },
+    {
+      id: 'gq5',
+      q: "The test was extremely difficult, but surprisingly Shakhnoza ______ pass it.",
+      opts: ["managed to", "could", "can", "was could"],
+      ans: "managed to",
+      expl: "Qiyin imtihondan bitta aniq holatda o'tib olish — 'managed to' yoki 'was able to'. 'Could pass' deb bo'lmaydi!"
+    },
+    {
+      id: 'gq6',
+      q: "I looked for my keys everywhere for an hour, but I ______ find them.",
+      opts: ["couldn't", "could", "wasn't able", "can't to"],
+      ans: "couldn't",
+      expl: "Inkor gapda bir martalik ish bo'lsa ham 'couldn't' yoki 'wasn't able to' ikkalasi ham to'g'ri hisoblanadi."
+    },
+    {
+      id: 'gq7',
+      q: "Excuse me, ______ you please help me carry this heavy suitcase?",
+      opts: ["Could", "May", "Are able", "Should"],
+      ans: "Could",
+      expl: "'Could you please...?' — xushmuomala, odobli iltimos qilishning klassik B1 shakli."
+    },
+    {
+      id: 'gq8',
+      q: "That man ______ be Anvar! Anvar is currently in London for his Master's degree.",
+      opts: ["can't", "couldn't to", "must", "isn't able"],
+      ans: "can't",
+      expl: "Mantiqiy inkor xulosa (deduction): biror narsaning mutlaqo imkonsizligini bildirish uchun 'can't be' (bo'lishi mumkin emas) ishlatiladi."
+    },
+    {
+      id: 'gq9',
+      q: "After swimming for three hours in the rough sea, the sailors ______ reach the shore alive.",
+      opts: ["were able to", "could", "can", "will be able to"],
+      ans: "were able to",
+      expl: "Dengizdagi qiyinchilikdan so'ng qirg'oqqa yetib olish — aniq bir martalik qahramonlik/yutuq: 'were able to'."
+    },
+    {
+      id: 'gq10',
+      q: "Although he had a broken leg, he ______ get out of the car before the police arrived.",
+      opts: ["was able to", "could", "can", "is able to"],
+      ans: "was able to",
+      expl: "Singan oyoq bilan mashinadan chiqishga muvaffaq bo'lish — bir martalik harakat: 'was able to'."
+    },
+    {
+      id: 'gq11',
+      q: "My grandmother ______ speak four languages when she was younger.",
+      opts: ["could", "was able", "can", "could to"],
+      ans: "could",
+      expl: "Tillar bilish — o'tmishdagi umumiy qobiliyat, shuning uchun 'could' to'g'ri."
+    },
+    {
+      id: 'gq12',
+      q: "Do you think one day scientists ______ predict earthquakes with 100% accuracy?",
+      opts: ["will be able to", "can", "will can", "could to"],
+      ans: "will be able to",
+      expl: "Kelajakdagi imkoniyat: 'will be able to'. 'Will can' ingliz tilida mavjud emas!"
+    },
+    {
+      id: 'gq13',
+      q: "I'm sorry I ______ come to your party tonight. I have to work late.",
+      opts: ["can't", "couldn't", "wasn't able to", "won't can"],
+      ans: "can't",
+      expl: "Bugun oqshom (hozir/yaqin kelajak) qila olmaslik uchun 'can't' eng tabiiy shakl."
+    },
+    {
+      id: 'gq14',
+      q: "He hasn't ______ contact his family since the phone lines went down.",
+      opts: ["been able to", "could", "can", "able to"],
+      ans: "been able to",
+      expl: "Hasn't + been able to + V1 (Present Perfect shakli)."
+    },
+    {
+      id: 'gq15',
+      q: "Despite the heavy traffic, we ______ get to the airport just in time for our flight.",
+      opts: ["were able to", "could", "can", "might"],
+      ans: "were able to",
+      expl: "Tirbandlikka qaramasdan aeroportga vaqtida yetib bordik — bir martalik muvaffaqiyat: 'were able to'."
+    },
+    {
+      id: 'gq16',
+      q: "She ______ run 10 kilometers in under 40 minutes when she was at college.",
+      opts: ["could", "was able", "will be able to", "is able"],
+      ans: "could",
+      expl: "Kollejda o'qib yurgan davridagi umumiy jismoniy qobiliyat: 'could'."
     }
   ];
 
-  // 8 CONTEXTUAL TRANSLATION ITEMS
-  const TRANS_ITEMS = [
-    { id: 1, uz: "1. U menga ertaga Toshkentga uchib ketishini aytdi.", placeholder: "He told me that he would fly to Tashkent the following day..." },
-    { id: 2, uz: "2. Shifokor mendan har kuni ertalab dori ichayotganimni so'radi.", placeholder: "The doctor asked me if/whether I was taking medicine every morning..." },
-    { id: 3, uz: "3. Direktor hujjatlarni o'sha kuni soat 5 gacha imzolashini va'da berdi.", placeholder: "The director promised that he would sign the documents that day before 5..." },
-    { id: 4, uz: "4. U mendan aeroportga qanday borish mumkinligini so'radi.", placeholder: "He asked me how he could get to the airport..." },
-    { id: 5, uz: "5. Onam menga kechqurun ko'chada yolg'iz yurmaslikni tayinladi (buyurdi).", placeholder: "My mother told me not to walk alone in the street at night..." },
-    { id: 6, uz: "6. Ali do'stining telefonini sindirib qo'yganini tan oldi.", placeholder: "Ali admitted having broken / breaking his friend's phone..." },
-    { id: 7, uz: "7. Ular o'tgan yili yangi uy sotib olganliklarini tushuntirdilar.", placeholder: "They explained that they had bought a new house the previous year..." },
-    { id: 8, uz: "8. Professor talabalarga imtihon paytida telefondan foydalanmaslikni buyurdi.", placeholder: "The professor ordered/told the students not to use phones during the exam..." }
+  // 6 MISTAKE HUNTER ITEMS
+  const HUNTER_ITEMS = [
+    {
+      id: 'h1',
+      sentence: "The math exam was extremely difficult, but I could pass it with a high score.",
+      error: "could pass",
+      correction: "was able to pass / managed to pass",
+      expl: "Imtihon kabi aniq bir martalik qiyin vaziyatda muvaffaqiyatga erishganda 'could' ishlatilmaydi! 'was able to pass' bo'lishi shart."
+    },
+    {
+      id: 'h2',
+      sentence: "Don't worry, when I get my new laptop I will can help you with programming.",
+      error: "will can",
+      correction: "will be able to",
+      expl: "Ingliz tilida 'will can' shakli mutlaqo mavjud emas. Kelajak qobiliyati uchun 'will be able to' ishlatiladi."
+    },
+    {
+      id: 'h3',
+      sentence: "She has been sick for three days and she hasn't could eat any solid food.",
+      error: "hasn't could",
+      correction: "hasn't been able to",
+      expl: "Present Perfect zamonida modal fe'llar V3 shaklini olmaydi, 'hasn't been able to' ishlatiladi."
+    },
+    {
+      id: 'h4',
+      sentence: "Excuse me sir, could you to open the door for me, please?",
+      error: "could you to open",
+      correction: "could you open",
+      expl: "'Could' modal fe'lidan keyin fe'l 'to' siz keladi (bare infinitive): 'could you open'."
+    },
+    {
+      id: 'h5',
+      sentence: "It's late at night, but he is still not at home. He can't to be working now.",
+      error: "can't to be",
+      correction: "can't be",
+      expl: "'Can't' modalidan keyin 'to' qo'yilmaydi: 'He can't be working now'."
+    },
+    {
+      id: 'h6',
+      sentence: "When my father was young, he was able to run faster than anyone in his school.",
+      error: "was able to run",
+      correction: "could run",
+      expl: "O'tmishdagi uzoq davom etgan umumiy qobiliyat (yoshligida tez yugurish) uchun 'could' ishlatiladi, bir martalik 'was able to' emas."
+    }
   ];
 
-  // USER STATE
+  // 6 SCRAMBLE ITEMS
+  const SCRAMBLE_ITEMS = [
+    {
+      id: 'sc1',
+      prompt: "Gapni to'g'ri tuzing (O't o'chiruvchilar bolani qutqarishga muvaffaq bo'lishdi):",
+      words: ["The", "firefighters", "were", "able", "to", "rescue", "the", "child."],
+      target: "The firefighters were able to rescue the child."
+    },
+    {
+      id: 'sc2',
+      prompt: "Gapni to'g'ri tuzing (Kelasi yili u mashina hayday oladi):",
+      words: ["Next", "year", "she", "will", "be", "able", "to", "drive."],
+      target: "Next year she will be able to drive."
+    },
+    {
+      id: 'sc3',
+      prompt: "Gapni to'g'ri tuzing (Biz uzoq qidirdik, lekin uni topa olmadik):",
+      words: ["We", "searched", "everywhere", "but", "couldn't", "find", "it."],
+      target: "We searched everywhere but couldn't find it."
+    },
+    {
+      id: 'sc4',
+      prompt: "Gapni to'g'ri tuzing (Menga tuzni uzatib yubora olasizmi, iltimos?):",
+      words: ["Could", "you", "pass", "me", "the", "salt", "please?"],
+      target: "Could you pass me the salt please?"
+    },
+    {
+      id: 'sc5',
+      prompt: "Gapni to'g'ri tuzing (U 4 yoshida o'qiy olardi):",
+      words: ["He", "could", "read", "when", "he", "was", "four."],
+      target: "He could read when he was four."
+    },
+    {
+      id: 'sc6',
+      prompt: "Gapni to'g'ri tuzing (Ular bu hafta biz bilan bog'lana olmadilar):",
+      words: ["They", "haven't", "been", "able", "to", "contact", "us."],
+      target: "They haven't been able to contact us."
+    }
+  ];
+
+  // 6 TRANSLATION ITEMS
+  const TRANS_ITEMS = [
+    {
+      id: 'tr1',
+      uz: "Eshik qulflangan edi, lekin biz deraza orqali kirishga muvaffaq bo'ldik.",
+      hint: "Use: was/were able to get in",
+      model: "The door was locked, but we were able to get in through the window."
+    },
+    {
+      id: 'tr2',
+      uz: "Men 6 yoshligimda juda yaxshi velosiped hayday olardim.",
+      hint: "Use: could ride (general ability)",
+      model: "When I was six years old, I could ride a bicycle very well."
+    },
+    {
+      id: 'tr3',
+      uz: "Kursni tugatganimdan so'ng, men erkin gaplasha olaman.",
+      hint: "Use: will be able to speak fluently",
+      model: "After finishing the course, I will be able to speak fluently."
+    },
+    {
+      id: 'tr4',
+      uz: "Men kalitlarimni hamma joydan qidirdim, lekin topa olmadim.",
+      hint: "Use: couldn't find / wasn't able to find",
+      model: "I looked for my keys everywhere, but I couldn't find them."
+    },
+    {
+      id: 'tr5',
+      uz: "U bu oy juda band bo'lgani sababli sport zaliga bora olmadi.",
+      hint: "Use: hasn't been able to go",
+      model: "Because she has been very busy this month, she hasn't been able to go to the gym."
+    },
+    {
+      id: 'tr6',
+      uz: "Iltimos, menga hisobotni tekshirishda yordam bera olasizmi?",
+      hint: "Use: Could you please help me...",
+      model: "Could you please help me check the report?"
+    }
+  ];
+
+  // STATE
   let userResponses = {
-    sayTell: {},
-    transforms: {},
-    errorHunt: {},
-    mcq: {},
-    translations: {},
-    narrative: ""
+    verbsQuiz: {},
+    grammarQuiz: {},
+    hunter: {},
+    scramble: {}
   };
+  let scrambleState = {};
 
-  function speak(text) {
-    if (!window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US';
-    u.rate = 0.9;
-    window.speechSynthesis.speak(u);
-  }
-
+  // INIT
   function init() {
-    renderVocab();
-    renderSayTell();
-    renderTransforms();
-    renderErrorHunt();
-    renderMcq();
-    renderTranslations();
+    renderVerbsTable(VERBS);
+    renderVerbsQuiz();
+    renderGrammarQuiz();
+    renderHunter();
+    renderScramble();
+    renderTranslation();
     loadDraft();
     updateLiveScore();
   }
 
-  function renderVocab() {
-    const c = document.getElementById('vocabGrid');
-    c.innerHTML = VOCAB_DATA.map(v => `
-      <div class="vocab-card">
-        <div class="vocab-top">
-          <span class="vocab-word">${v.word}</span>
-          <button class="vocab-audio-btn" onclick="speak('${v.word.replace(/'/g, "\\'")}')">🔊 Tinglash</button>
-        </div>
-        <div class="vocab-uz">${v.uz}</div>
-        <div class="vocab-ex">${v.ex}</div>
-      </div>
+  // SPEECH SYNTHESIS
+  function speak(text) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US';
+      u.rate = 0.9;
+      window.speechSynthesis.speak(u);
+    }
+  }
+
+  // RENDER VERBS TABLE
+  function renderVerbsTable(list) {
+    const tbody = document.getElementById('verbsTbody');
+    tbody.innerHTML = list.map((v, idx) => `
+      <tr>
+        <td style="color:#64748b; font-weight:700;">${61 + idx}</td>
+        <td><span class="verb-v1">${v.v1}</span></td>
+        <td><span class="verb-v2">${v.v2}</span></td>
+        <td><span class="verb-v3">${v.v3}</span></td>
+        <td><span class="verb-uz">${v.uz}</span></td>
+        <td><button class="audio-btn" onclick="speak('${v.v1}, ${v.v2.replace('/',' or ')}, ${v.v3}')">🔊</button></td>
+      </tr>
     `).join('');
   }
 
-  function renderSayTell() {
-    const c = document.getElementById('sayTellContainer');
-    c.innerHTML = SAY_TELL_ITEMS.map(item => `
-      <div class="q-card" id="card_saytell_${item.id}">
-        <div class="q-num">Savol ${item.id} / 15</div>
-        <div class="q-prompt">${item.prompt.replace('______', '<code>______</code>')}</div>
-        <div class="btn-group">
-          ${item.opts.map(opt => `
-            <button class="choice-btn" id="btn_saytell_${item.id}_${opt.replace(/\s+/g,'_')}" onclick="checkSayTell(${item.id}, '${opt}')">
-              ${opt}
-            </button>
-          `).join('')}
-        </div>
-        <div class="expl-box" id="expl_saytell_${item.id}"></div>
-      </div>
-    `).join('');
+  function filterVerbs() {
+    const q = document.getElementById('verbSearchInput').value.toLowerCase().trim();
+    const filtered = VERBS.filter(v => 
+      v.v1.toLowerCase().includes(q) || 
+      v.v2.toLowerCase().includes(q) || 
+      v.v3.toLowerCase().includes(q) || 
+      v.uz.toLowerCase().includes(q)
+    );
+    renderVerbsTable(filtered);
   }
 
-  function checkSayTell(id, chosen) {
-    const item = SAY_TELL_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_saytell_' + id);
-    const expl = document.getElementById('expl_saytell_' + id);
-    const isCorrect = chosen === item.ans;
-
-    userResponses.sayTell[id] = { chosen, isCorrect };
-
-    item.opts.forEach(opt => {
-      const btn = document.getElementById(`btn_saytell_${id}_${opt.replace(/\s+/g,'_')}`);
-      btn.className = 'choice-btn';
-      if (opt === item.ans) {
-        if (isCorrect) btn.className = 'choice-btn selected-correct';
-      } else if (opt === chosen && !isCorrect) {
-        btn.className = 'choice-btn selected-wrong';
-      }
-    });
-
-    if (isCorrect) {
-      card.className = 'q-card correct';
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
-    } else {
-      card.className = 'q-card wrong';
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato tanlov.</b> ' + item.expl;
-    }
-
-    updateLiveScore();
-    saveDraft();
-  }
-
-  function renderTransforms() {
-    const c = document.getElementById('transformContainer');
-    c.innerHTML = TRANSFORM_ITEMS.map(item => `
-      <div class="q-card" id="card_trans_${item.id}">
-        <div class="q-num">Transformatsiya ${item.id} / 15</div>
-        <div class="q-prompt" style="color:#c4b5fd;"><b>Direct:</b> <i>"${item.direct.replace(/^.*?: '/, '').replace(/'$/, '')}"</i></div>
-        <div style="font-size:0.86rem; color:#94a3b8; margin-bottom:6px;"><b>Boshlanishi:</b> ${item.lead}</div>
-        <div class="input-wrap">
-          <input type="text" id="input_trans_${item.id}" placeholder="Davomini yozing..." onkeydown="if(event.key==='Enter') checkTransform(${item.id})">
-          <button class="check-btn" onclick="checkTransform(${item.id})">Tekshirish</button>
-        </div>
-        <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">💡 Qoida: ${item.hint}</div>
-        <div class="expl-box" id="expl_trans_${item.id}"></div>
-      </div>
-    `).join('');
-  }
-
-  function cleanText(str) {
-    return str.toLowerCase()
-      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?'"]/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function checkTransform(id) {
-    const item = TRANSFORM_ITEMS.find(x => x.id === id);
-    const val = document.getElementById('input_trans_' + id).value.trim();
-    const card = document.getElementById('card_trans_' + id);
-    const expl = document.getElementById('expl_trans_' + id);
-
-    if (!val) {
-      alert("Iltimos, avval javobingizni yozing!");
-      return;
-    }
-
-    const cleanedUser = cleanText(val);
-    const isCorrect = item.accepted.some(acc => cleanText(acc) === cleanedUser);
-
-    userResponses.transforms[id] = { text: val, isCorrect };
-
-    if (isCorrect) {
-      card.className = 'q-card correct';
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>Ajoyib, mukammal o\'zgarish!</b> Backshift va olmoshlar to\'g\'ri moslashtirildi.';
-    } else {
-      card.className = 'q-card wrong';
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Qayta urinib ko\'ring.</b> Qabul qilinadigan namuna: <i>"' + item.accepted[0] + '"</i>';
-    }
-
-    updateLiveScore();
-    saveDraft();
-  }
-
-  function renderErrorHunt() {
-    const c = document.getElementById('errorHuntContainer');
-    c.innerHTML = ERROR_ITEMS.map(item => `
-      <div class="q-card" id="card_err_${item.id}">
-        <div class="q-num">Qopqon ${item.id} / 10</div>
-        <div class="q-prompt" style="color:#fca5a5;">❌ <code>${item.bad}</code></div>
-        <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:6px;">💡 Maslahat: ${item.hint}</div>
-        <div class="input-wrap">
-          <input type="text" id="input_err_${item.id}" placeholder="To'liq to'g'rilangan gapni yozing..." onkeydown="if(event.key==='Enter') checkErrorHunt(${item.id})">
-          <button class="check-btn" onclick="checkErrorHunt(${item.id})">Tekshirish</button>
-        </div>
-        <div class="expl-box" id="expl_err_${item.id}"></div>
-      </div>
-    `).join('');
-  }
-
-  function checkErrorHunt(id) {
-    const item = ERROR_ITEMS.find(x => x.id === id);
-    const val = document.getElementById('input_err_' + id).value.trim();
-    const card = document.getElementById('card_err_' + id);
-    const expl = document.getElementById('expl_err_' + id);
-
-    if (!val) {
-      alert("Iltimos, to'g'rilangan gapni yozing!");
-      return;
-    }
-
-    const cleanedUser = cleanText(val);
-    const isCorrect = item.correctVariants.some(acc => cleanText(acc) === cleanedUser);
-
-    userResponses.errorHunt[id] = { text: val, isCorrect };
-
-    if (isCorrect) {
-      card.className = 'q-card correct';
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>Xato to\'g\'ri bartaraf etildi!</b>';
-    } else {
-      card.className = 'q-card wrong';
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Kutilgan javob:</b> <i>"' + item.correctVariants[0] + '"</i>';
-    }
-
-    updateLiveScore();
-    saveDraft();
-  }
-
-  function renderMcq() {
-    const c = document.getElementById('mcqContainer');
-    c.innerHTML = MCQ_ITEMS.map(item => `
-      <div class="q-card" id="card_mcq_${item.id}">
-        <div class="q-num">Test ${item.id} / 10</div>
+  // RENDER VERBS QUIZ
+  function renderVerbsQuiz() {
+    const c = document.getElementById('verbsQuizContainer');
+    c.innerHTML = VERB_QUIZ_ITEMS.map((item, idx) => `
+      <div class="q-card" id="card_vq_${item.id}">
+        <div class="q-num">Fe'l Savoli ${idx + 1} / ${VERB_QUIZ_ITEMS.length}</div>
         <div class="q-prompt">${item.q}</div>
         <div class="btn-group">
           ${item.opts.map(opt => `
-            <button class="choice-btn" id="btn_mcq_${item.id}_${opt.replace(/\s+/g,'_')}" onclick="checkMcq(${item.id}, '${opt.replace(/'/g, "\\'")}')">
-              ${opt}
-            </button>
+            <button class="choice-btn" data-opt="${opt}" onclick="handleInstantChoice('verbsQuiz', '${item.id}', '${opt}', this)">${opt}</button>
           `).join('')}
         </div>
-        <div class="expl-box" id="expl_mcq_${item.id}"></div>
+        <div class="expl-box" id="expl_vq_${item.id}"></div>
       </div>
     `).join('');
   }
 
-  function checkMcq(id, chosen) {
-    const item = MCQ_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_mcq_' + id);
-    const expl = document.getElementById('expl_mcq_' + id);
-    const isCorrect = chosen === item.ans;
+  // RENDER GRAMMAR QUIZ
+  function renderGrammarQuiz() {
+    const c = document.getElementById('grammarQuizContainer');
+    c.innerHTML = GRAMMAR_QUIZ_ITEMS.map((item, idx) => `
+      <div class="q-card" id="card_gq_${item.id}">
+        <div class="q-num">Grammatika Savoli ${idx + 1} / ${GRAMMAR_QUIZ_ITEMS.length}</div>
+        <div class="q-prompt">${item.q}</div>
+        <div class="btn-group">
+          ${item.opts.map(opt => `
+            <button class="choice-btn" data-opt="${opt}" onclick="handleInstantChoice('grammarQuiz', '${item.id}', '${opt}', this)">${opt}</button>
+          `).join('')}
+        </div>
+        <div class="expl-box" id="expl_gq_${item.id}"></div>
+      </div>
+    `).join('');
+  }
 
-    userResponses.mcq[id] = { chosen, isCorrect };
+  // INSTANT CHOICE HANDLER WITH VISUAL FEEDBACK
+  function handleInstantChoice(cat, qId, selectedOption, btnEl) {
+    if (userResponses[cat][qId]) return; // already answered
 
-    item.opts.forEach(opt => {
-      const btn = document.getElementById(`btn_mcq_${id}_${opt.replace(/\s+/g,'_')}`);
-      btn.className = 'choice-btn';
-      if (opt === item.ans) {
-        if (isCorrect) btn.className = 'choice-btn selected-correct';
-      } else if (opt === chosen && !isCorrect) {
-        btn.className = 'choice-btn selected-wrong';
+    const items = (cat === 'verbsQuiz') ? VERB_QUIZ_ITEMS : GRAMMAR_QUIZ_ITEMS;
+    const item = items.find(x => x.id === qId);
+    const isCorrect = (selectedOption === item.ans);
+    userResponses[cat][qId] = { selected: selectedOption, isCorrect: isCorrect };
+
+    const qCard = document.getElementById(`card_${cat === 'verbsQuiz' ? 'vq' : 'gq'}_${qId}`);
+    const explBox = document.getElementById(`expl_${cat === 'verbsQuiz' ? 'vq' : 'gq'}_${qId}`);
+    const buttons = btnEl.parentElement.querySelectorAll('.choice-btn');
+
+    buttons.forEach(b => {
+      b.disabled = true;
+      if (b.dataset.opt === item.ans) {
+        b.classList.add('reveal-correct');
+        b.innerHTML = '✅ ' + b.dataset.opt;
       }
     });
 
     if (isCorrect) {
-      card.className = 'q-card correct';
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
+      qCard.classList.add('correct');
+      btnEl.classList.add('selected-correct');
+      btnEl.innerHTML = '✅ ' + selectedOption;
+      explBox.className = 'expl-box show correct';
+      explBox.innerHTML = `<strong>✅ To'g'ri javob!</strong><br>${item.expl}`;
     } else {
-      card.className = 'q-card wrong';
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato variant.</b> ' + item.expl;
+      qCard.classList.add('wrong');
+      btnEl.classList.add('selected-wrong');
+      btnEl.innerHTML = '❌ ' + selectedOption;
+      explBox.className = 'expl-box show wrong';
+      explBox.innerHTML = `<strong>❌ Noto'g'ri.</strong> To'g'ri javob: <strong style="color:#6ee7b7;">${item.ans}</strong><br>${item.expl}`;
     }
 
     updateLiveScore();
     saveDraft();
   }
 
-  function renderTranslations() {
+  // RENDER MISTAKE HUNTER
+  function renderHunter() {
+    const c = document.getElementById('hunterContainer');
+    c.innerHTML = HUNTER_ITEMS.map((item, idx) => {
+      // Split sentence into words/phrases
+      const words = item.sentence.split(' ');
+      return `
+        <div class="q-card" id="card_hunt_${item.id}">
+          <div class="q-num">Xato Ovchisi ${idx + 1} / ${HUNTER_ITEMS.length}</div>
+          <div class="hunter-sentence">"${item.sentence}"</div>
+          <div style="font-size:0.85rem; color:#94a3b8; margin-bottom:8px;">Qaysi qismda xatolik bor? Xato so'z yoki iborani bosing:</div>
+          <div class="hunter-chips">
+            ${generateHunterOptions(item).map(chunk => `
+              <button class="choice-btn" data-chunk="${chunk}" onclick="handleHunterChoice('${item.id}', '${chunk}', this)">${chunk}</button>
+            `).join('')}
+          </div>
+          <div class="expl-box" id="expl_hunt_${item.id}"></div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function generateHunterOptions(item) {
+    // Return distractors and the correct error chunk
+    const error = item.error;
+    const words = item.sentence.replace(/[.,]/g, '').split(' ');
+    const chunks = [error];
+    
+    // Add 3 other logical chunks from the sentence
+    for (let i = 0; i < words.length - 1; i += 2) {
+      const candidate = words[i] + ' ' + (words[i+1] || '');
+      if (candidate.toLowerCase() !== error.toLowerCase() && chunks.length < 4) {
+        chunks.push(candidate);
+      }
+    }
+    return chunks.sort(() => Math.random() - 0.5);
+  }
+
+  function handleHunterChoice(itemId, selectedChunk, btnEl) {
+    if (userResponses.hunter[itemId]) return;
+
+    const item = HUNTER_ITEMS.find(x => x.id === itemId);
+    const isCorrect = (selectedChunk === item.error);
+    userResponses.hunter[itemId] = { selected: selectedChunk, isCorrect: isCorrect };
+
+    const qCard = document.getElementById(`card_hunt_${itemId}`);
+    const explBox = document.getElementById(`expl_hunt_${itemId}`);
+    const buttons = btnEl.parentElement.querySelectorAll('.choice-btn');
+
+    buttons.forEach(b => {
+      b.disabled = true;
+      if (b.dataset.chunk === item.error) {
+        b.classList.add('reveal-correct');
+        b.innerHTML = '🎯 ' + b.dataset.chunk;
+      }
+    });
+
+    if (isCorrect) {
+      qCard.classList.add('correct');
+      btnEl.classList.add('selected-correct');
+      explBox.className = 'expl-box show correct';
+      explBox.innerHTML = `<strong>🎯 Xato topildi: "${item.error}"</strong><br>To'g'ri shakl: <strong style="color:#6ee7b7;">${item.correction}</strong><br>${item.expl}`;
+    } else {
+      qCard.classList.add('wrong');
+      btnEl.classList.add('selected-wrong');
+      explBox.className = 'expl-box show wrong';
+      explBox.innerHTML = `<strong>❌ Bu yerda xato yo'q.</strong> Asl xato: <strong style="color:#f87171;">"${item.error}"</strong> edi.<br>To'g'ri shakl: <strong style="color:#6ee7b7;">${item.correction}</strong><br>${item.expl}`;
+    }
+
+    updateLiveScore();
+    saveDraft();
+  }
+
+  // RENDER SCRAMBLE
+  function renderScramble() {
+    const c = document.getElementById('scrambleContainer');
+    c.innerHTML = SCRAMBLE_ITEMS.map((item, idx) => {
+      scrambleState[item.id] = { selected: [], words: [...item.words].sort(() => Math.random() - 0.5) };
+      return `
+        <div class="q-card" id="card_sc_${item.id}">
+          <div class="q-num">Gap Tuzuvchi ${idx + 1} / ${SCRAMBLE_ITEMS.length}</div>
+          <div class="q-prompt">${item.prompt}</div>
+          <div class="scramble-result-box" id="result_sc_${item.id}">
+            <span style="color:#64748b; font-size:0.85rem;" id="placeholder_sc_${item.id}">Pastdagi so'zlarni ketma-ket bosing...</span>
+          </div>
+          <div class="scramble-pool" id="pool_sc_${item.id}">
+            ${scrambleState[item.id].words.map((w, wIdx) => `
+              <button class="scramble-chip" id="chip_${item.id}_${wIdx}" onclick="addScrambleWord('${item.id}', '${w}', ${wIdx})">${w}</button>
+            `).join('')}
+          </div>
+          <div class="scramble-actions">
+            <button class="check-btn" onclick="checkScramble('${item.id}')">✔️ Tekshirish</button>
+            <button class="reset-btn" onclick="resetScramble('${item.id}')">🔄 Qaytadan</button>
+          </div>
+          <div class="expl-box" id="expl_sc_${item.id}"></div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function addScrambleWord(itemId, word, chipIdx) {
+    if (userResponses.scramble[itemId]) return;
+    const state = scrambleState[itemId];
+    state.selected.push({ word, chipIdx });
+    document.getElementById(`chip_${itemId}_${chipIdx}`).classList.add('used');
+
+    const resultBox = document.getElementById(`result_sc_${itemId}`);
+    const placeholder = document.getElementById(`placeholder_sc_${itemId}`);
+    if (placeholder) placeholder.style.display = 'none';
+
+    renderScrambleResult(itemId);
+  }
+
+  function renderScrambleResult(itemId) {
+    const resultBox = document.getElementById(`result_sc_${itemId}`);
+    const state = scrambleState[itemId];
+    resultBox.innerHTML = state.selected.map((s, pos) => `
+      <span class="scramble-item" onclick="removeScrambleWord('${itemId}', ${pos})">${s.word} ✕</span>
+    `).join('');
+  }
+
+  function removeScrambleWord(itemId, pos) {
+    if (userResponses.scramble[itemId]) return;
+    const state = scrambleState[itemId];
+    const removed = state.selected.splice(pos, 1)[0];
+    document.getElementById(`chip_${itemId}_${removed.chipIdx}`).classList.remove('used');
+    renderScrambleResult(itemId);
+  }
+
+  function resetScramble(itemId) {
+    if (userResponses.scramble[itemId]) return;
+    const state = scrambleState[itemId];
+    state.selected = [];
+    document.querySelectorAll(`#pool_sc_${itemId} .scramble-chip`).forEach(ch => ch.classList.remove('used'));
+    document.getElementById(`result_sc_${itemId}`).innerHTML = `<span style="color:#64748b; font-size:0.85rem;" id="placeholder_sc_${itemId}">Pastdagi so'zlarni ketma-ket bosing...</span>`;
+  }
+
+  function checkScramble(itemId) {
+    if (userResponses.scramble[itemId]) return;
+    const item = SCRAMBLE_ITEMS.find(x => x.id === itemId);
+    const state = scrambleState[itemId];
+    const userBuilt = state.selected.map(s => s.word).join(' ').trim();
+
+    if (!userBuilt) {
+      alert("Iltimos, avval so'zlarni tanlang!");
+      return;
+    }
+
+    const isCorrect = (userBuilt.toLowerCase() === item.target.toLowerCase());
+    userResponses.scramble[itemId] = { userBuilt, isCorrect };
+
+    const qCard = document.getElementById(`card_sc_${itemId}`);
+    const explBox = document.getElementById(`expl_sc_${itemId}`);
+
+    if (isCorrect) {
+      qCard.classList.add('correct');
+      explBox.className = 'expl-box show correct';
+      explBox.innerHTML = `<strong>✅ Mukammal!</strong> Gap to'g'ri tuzildi: <i>"${item.target}"</i>`;
+    } else {
+      qCard.classList.add('wrong');
+      explBox.className = 'expl-box show wrong';
+      explBox.innerHTML = `<strong>❌ Ketma-ketlikda xatolik bor.</strong><br>Siz tuzdingiz: "<i>${userBuilt}</i>"<br>To'g'ri ketma-ketlik: <strong style="color:#6ee7b7;">"${item.target}"</strong>`;
+    }
+
+    updateLiveScore();
+    saveDraft();
+  }
+
+  // RENDER TRANSLATION
+  function renderTranslation() {
     const c = document.getElementById('transContainer');
-    c.innerHTML = TRANS_ITEMS.map(t => `
+    c.innerHTML = TRANS_ITEMS.map((t, idx) => `
       <div class="trans-item">
-        <div class="trans-prompt">${t.uz}</div>
-        <input type="text" id="trans_${t.id}" placeholder="${t.placeholder}" oninput="saveDraft()">
+        <div class="trans-prompt">${idx + 1}. ${t.uz}</div>
+        <div class="trans-hint">💡 Yordamchi ibora: ${t.hint}</div>
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="trans_${t.id}" placeholder="Inglizcha tarjimasini yozing..." oninput="saveDraft()">
+          <button class="check-btn" onclick="revealTranslation('${t.id}')">Tekshirish</button>
+        </div>
+        <div class="trans-reveal-box" id="reveal_${t.id}">
+          <strong>Namunaviy to'g'ri tarjima:</strong><br>
+          <span style="font-family:'JetBrains Mono',monospace; color:#fff;">${t.model}</span>
+          <button class="audio-btn" style="margin-left:8px;" onclick="speak('${t.model}')">🔊 Tinglash</button>
+        </div>
       </div>
     `).join('');
   }
 
+  function revealTranslation(tId) {
+    const box = document.getElementById('reveal_' + tId);
+    box.style.display = 'block';
+  }
+
+  // UPDATE LIVE SCORE & PROGRESS BAR
   function updateLiveScore() {
-    let score = 0;
+    const total = VERB_QUIZ_ITEMS.length + GRAMMAR_QUIZ_ITEMS.length + HUNTER_ITEMS.length + SCRAMBLE_ITEMS.length;
     let answered = 0;
-    const total = SAY_TELL_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + MCQ_ITEMS.length; // 15 + 15 + 10 + 10 = 50
+    let correct = 0;
 
-    Object.values(userResponses.sayTell).forEach(r => { answered++; if (r.isCorrect) score++; });
-    Object.values(userResponses.transforms).forEach(r => { answered++; if (r.isCorrect) score++; });
-    Object.values(userResponses.errorHunt).forEach(r => { answered++; if (r.isCorrect) score++; });
-    Object.values(userResponses.mcq).forEach(r => { answered++; if (r.isCorrect) score++; });
+    ['verbsQuiz', 'grammarQuiz', 'hunter', 'scramble'].forEach(cat => {
+      Object.values(userResponses[cat] || {}).forEach(r => {
+        answered++;
+        if (r.isCorrect) correct++;
+      });
+    });
 
-    document.getElementById('liveScoreBadge').innerText = score + ' / ' + total;
-    document.getElementById('progressInfoText').innerText = 'Javob berildi: ' + answered + ' / ' + total + ' (' + Math.round((answered/total)*100) + '%)';
-    document.getElementById('progressBarFill').style.width = Math.round((answered/total)*100) + '%';
+    const pct = Math.round((answered / total) * 100);
+    document.getElementById('liveScoreBadge').innerText = correct + ' / ' + total;
+    document.getElementById('progressInfoText').innerText = `Javob berildi: ${answered} / ${total} (${pct}%)`;
+    document.getElementById('progressBarFill').style.width = pct + '%';
 
-    if (answered === total && score >= total * 0.8) {
-      confetti({ particleCount: 70, spread: 60, origin: { y: 0.8 } });
+    if (answered === total && correct >= total * 0.8) {
+      confetti({ particleCount: 80, spread: 70, origin: { y: 0.8 } });
     }
   }
 
+  // LOCAL STORAGE DRAFT
   function saveDraft() {
     const data = {
-      studentName: document.getElementById('studentName').value,
-      studentTelegram: document.getElementById('studentTelegram').value,
+      name: document.getElementById('studentName').value,
+      telegram: document.getElementById('studentTelegram').value,
       userResponses,
       trans: {},
-      narrative: document.getElementById('essayNarrative').value
+      prod: {
+        p1: document.getElementById('prod1').value,
+        p2: document.getElementById('prod2').value,
+        p3: document.getElementById('prod3').value
+      }
     };
     TRANS_ITEMS.forEach(t => {
       const el = document.getElementById('trans_' + t.id);
@@ -1098,18 +1052,23 @@
     if (!raw) return;
     try {
       const data = JSON.parse(raw);
-      if (data.studentName) document.getElementById('studentName').value = data.studentName;
-      if (data.studentTelegram) document.getElementById('studentTelegram').value = data.studentTelegram;
+      if (data.name) document.getElementById('studentName').value = data.name;
+      if (data.telegram) document.getElementById('studentTelegram').value = data.telegram;
       if (data.trans) {
         Object.keys(data.trans).forEach(k => {
           const el = document.getElementById('trans_' + k);
           if (el) el.value = data.trans[k];
         });
       }
-      if (data.narrative) document.getElementById('essayNarrative').value = data.narrative;
+      if (data.prod) {
+        if (data.prod.p1) document.getElementById('prod1').value = data.prod.p1;
+        if (data.prod.p2) document.getElementById('prod2').value = data.prod.p2;
+        if (data.prod.p3) document.getElementById('prod3').value = data.prod.p3;
+      }
     } catch(e) {}
   }
 
+  // SUBMIT TO TELEGRAM
   async function submitToTelegram() {
     const name = document.getElementById('studentName').value.trim();
     const username = document.getElementById('studentTelegram').value.trim();
@@ -1124,52 +1083,52 @@
 
     btn.disabled = true;
     btn.innerText = "⏳ Yuborilmoqda...";
-    status.style.color = "#e9d5ff";
+    status.style.color = "#c4b5fd";
     status.innerText = "Telegram botga hisobot uzatilmoqda...";
 
-    let score = 0;
-    const total = SAY_TELL_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + MCQ_ITEMS.length;
-    Object.values(userResponses.sayTell).forEach(r => { if (r.isCorrect) score++; });
-    Object.values(userResponses.transforms).forEach(r => { if (r.isCorrect) score++; });
-    Object.values(userResponses.errorHunt).forEach(r => { if (r.isCorrect) score++; });
-    Object.values(userResponses.mcq).forEach(r => { if (r.isCorrect) score++; });
+    const total = VERB_QUIZ_ITEMS.length + GRAMMAR_QUIZ_ITEMS.length + HUNTER_ITEMS.length + SCRAMBLE_ITEMS.length;
+    let correct = 0;
+    ['verbsQuiz', 'grammarQuiz', 'hunter', 'scramble'].forEach(cat => {
+      Object.values(userResponses[cat] || {}).forEach(r => { if (r.isCorrect) correct++; });
+    });
 
-    const pct = Math.round((score / total) * 100);
+    const pct = Math.round((correct / total) * 100);
 
-    let msg = "🗣 *VAZIFA HISOBOTI: B1 REPORTED SPEECH MASTERY*\n";
+    let msg = "🌟 *B1 VAZIFA HISOBOTI: CAN, COULD, BE ABLE TO & 30 VERBS (61-90)*\n";
     msg += "━━━━━━━━━━━━━━━━━━━━\n";
     msg += "👤 *O'quvchi:* " + name + " (" + (username || "username yo'q") + ")\n";
-    msg += "🎯 *Natija:* " + score + " / " + total + " (" + pct + "%)\n";
-    msg += "⏰ *Sana:* " + new Date().toLocaleString('uz-UZ') + "\n\n";
+    msg += "🎯 *Umumiy Ball:* " + correct + " / " + total + " (" + pct + "%)\n";
+    msg += "⏰ *Vaqt:* " + new Date().toLocaleString('uz-UZ') + "\n\n";
 
-    msg += "📊 *BO'LIMLAR BO'YICHA:*\n";
-    msg += "• Say vs Tell & Reporting Verbs: " + Object.values(userResponses.sayTell).filter(r=>r.isCorrect).length + " / " + SAY_TELL_ITEMS.length + "\n";
-    msg += "• Direct to Reported Transformations: " + Object.values(userResponses.transforms).filter(r=>r.isCorrect).length + " / " + TRANSFORM_ITEMS.length + "\n";
-    msg += "• Qopqonlarni Tuzatish (Error Hunt): " + Object.values(userResponses.errorHunt).filter(r=>r.isCorrect).length + " / " + ERROR_ITEMS.length + "\n";
-    msg += "• Reported Speech MCQs: " + Object.values(userResponses.mcq).filter(r=>r.isCorrect).length + " / " + MCQ_ITEMS.length + "\n\n";
+    msg += "📊 *BO'LIMLAR BO'YICHA NATIJALAR:*\n";
+    msg += "• 1. 30 Irregular Verbs (61-90): " + Object.values(userResponses.verbsQuiz || {}).filter(r=>r.isCorrect).length + " / " + VERB_QUIZ_ITEMS.length + "\n";
+    msg += "• 2. Can/Could/Be Able To Test: " + Object.values(userResponses.grammarQuiz || {}).filter(r=>r.isCorrect).length + " / " + GRAMMAR_QUIZ_ITEMS.length + "\n";
+    msg += "• 3. Xato Ovchisi (Hunter): " + Object.values(userResponses.hunter || {}).filter(r=>r.isCorrect).length + " / " + HUNTER_ITEMS.length + "\n";
+    msg += "• 4. Gap Tuzuvchi (Scramble): " + Object.values(userResponses.scramble || {}).filter(r=>r.isCorrect).length + " / " + SCRAMBLE_ITEMS.length + "\n\n";
 
-    msg += "✍️ *TARJIMALAR (8 ta):*\n";
-    TRANS_ITEMS.forEach(t => {
+    msg += "✍️ *TARJIMA JAVOBLARI:*\n";
+    TRANS_ITEMS.forEach((t, i) => {
       const val = document.getElementById('trans_' + t.id)?.value.trim() || "—";
-      msg += t.id + ". " + val + "\n";
+      msg += (i + 1) + ". " + val + "\n";
     });
     msg += "\n";
 
-    msg += "📝 *SUHBAT HIKOYASI (INSHO):*\n";
-    const narr = document.getElementById('essayNarrative').value.trim() || "—";
-    msg += narr + "\n";
+    msg += "🌟 *SHAXSIY INSHO:*\n";
+    msg += "1. Yoshlikdagi qobiliyat (could):\n" + (document.getElementById('prod1').value.trim() || "—") + "\n";
+    msg += "2. Bir martalik yutuq (was able to):\n" + (document.getElementById('prod2').value.trim() || "—") + "\n";
+    msg += "3. Kelajak reja (will be able to):\n" + (document.getElementById('prod3').value.trim() || "—") + "\n";
 
     try {
-      for (const chatId of TEACHER_IDS) {
-        await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: msg,
-            parse_mode: 'Markdown'
-          })
-        });
+      for (const token of [BOT_TOKEN, BOT_TOKEN_BACKUP]) {
+        for (const chatId of TEACHER_IDS) {
+          try {
+            await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ chat_id: chatId, text: msg, parse_mode: 'Markdown' })
+            });
+          } catch(e) {}
+        }
       }
 
       btn.disabled = false;
@@ -1177,7 +1136,7 @@
       btn.style.background = "#10b981";
       status.style.color = "#6ee7b7";
       status.innerText = "Hisobotingiz muvaffaqiyatli topshirildi va ustozga yetkazildi!";
-      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+      confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
     } catch(err) {
       btn.disabled = false;
       btn.innerText = "Qayta yuborish";
